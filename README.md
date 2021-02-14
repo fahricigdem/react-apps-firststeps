@@ -1,10 +1,12 @@
 # https://fahricigdem.github.io/react-apps-firststeps/
 
-## Getting Started with Create React App
+Technical information not specifically related to this Project:
+
+### Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+### Available Scripts
 
 In the project directory, you can run:
 
