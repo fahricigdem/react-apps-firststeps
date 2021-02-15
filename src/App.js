@@ -15,8 +15,8 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React, los!
-        </a>
+          Learn React
+        </a><span style={{ color: 'red' }}>los!</span>
       </header>
     </div>
   );
