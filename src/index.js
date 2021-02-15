@@ -8,7 +8,6 @@ import Products from "./projects/products-app/App"
 import Products_v1 from "./projects/products-app/App_v1"
 import Todos from "./projects/todo-app/App"
 
-
 ReactDOM.render(
   <React.StrictMode>
     <br />

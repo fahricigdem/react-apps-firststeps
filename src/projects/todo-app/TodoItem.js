@@ -1,13 +1,18 @@
-import React from "react"
+import React, { useState } from "react"
 
 function TodoItem(props) {
-    console.log(props)
+
+    let className = !props.data.completed == true ? "" : "checked"
+
     return (
         <div className="todo-item">
-            <input type="checkbox" />
-            <p>Placeholder text here</p>
+            <input type="checkbox" checked={props.data.completed} onClick={() => props.checkIt(props.data)} />
+            <p className={className}>{props.data.text}</p>
         </div>
     )
 }
 
 export default TodoItem
+
+
+

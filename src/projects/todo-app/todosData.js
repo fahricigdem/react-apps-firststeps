@@ -23,7 +23,23 @@ const todosData = [
         id: 5,
         text: "Catch up on Arrested Development",
         completed: false
+    },
+    {
+        id: 6,
+        text: "Go there",
+        completed: true
+    },
+    {
+        id: 7,
+        text: "Come here",
+        completed: false
+    },
+    {
+        id: 8,
+        text: "Try it again",
+        completed: false
     }
 ]
+
 
 export default todosData
