@@ -4,12 +4,55 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import Products from "./projects/products-app/App"
+import Products_v1 from "./projects/products-app/App_v1"
+import Todos from "./projects/todo-app/App"
+
+
+ReactDOM.render(
+  <React.StrictMode>
+    <br />
+  </React.StrictMode>,
+  document.getElementById('root5')
+);
+ReactDOM.render(
+  <React.StrictMode>
+    <br />
+  </React.StrictMode>,
+  document.getElementById('root4')
+);
+ReactDOM.render(
+  <React.StrictMode>
+    <Todos />
+  </React.StrictMode>,
+  document.getElementById('root3')
+);
+ReactDOM.render(
+  <React.StrictMode>
+    <Products />
+  </React.StrictMode>,
+  document.getElementById('root2')
+);
+ReactDOM.render(
+  <React.StrictMode>
+    <Products_v1 />
+  </React.StrictMode>,
+  document.getElementById('root1')
+);
 ReactDOM.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
   document.getElementById('root')
 );
+
+
+
+
+
+
+
+
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
