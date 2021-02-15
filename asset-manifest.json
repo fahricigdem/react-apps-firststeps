@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/react-apps-firststeps/static/css/main.7d180cbf.chunk.css",
-    "main.js": "/react-apps-firststeps/static/js/main.bffc3643.chunk.js",
-    "main.js.map": "/react-apps-firststeps/static/js/main.bffc3643.chunk.js.map",
-    "runtime-main.js": "/react-apps-firststeps/static/js/runtime-main.92718de6.js",
-    "runtime-main.js.map": "/react-apps-firststeps/static/js/runtime-main.92718de6.js.map",
-    "static/js/2.ec324696.chunk.js": "/react-apps-firststeps/static/js/2.ec324696.chunk.js",
-    "static/js/2.ec324696.chunk.js.map": "/react-apps-firststeps/static/js/2.ec324696.chunk.js.map",
-    "static/js/3.c229a075.chunk.js": "/react-apps-firststeps/static/js/3.c229a075.chunk.js",
-    "static/js/3.c229a075.chunk.js.map": "/react-apps-firststeps/static/js/3.c229a075.chunk.js.map",
+    "main.css": "/react-apps-firststeps/static/css/main.bf30de5e.chunk.css",
+    "main.js": "/react-apps-firststeps/static/js/main.e9338085.chunk.js",
+    "main.js.map": "/react-apps-firststeps/static/js/main.e9338085.chunk.js.map",
+    "runtime-main.js": "/react-apps-firststeps/static/js/runtime-main.c377e356.js",
+    "runtime-main.js.map": "/react-apps-firststeps/static/js/runtime-main.c377e356.js.map",
+    "static/js/2.1a48209b.chunk.js": "/react-apps-firststeps/static/js/2.1a48209b.chunk.js",
+    "static/js/2.1a48209b.chunk.js.map": "/react-apps-firststeps/static/js/2.1a48209b.chunk.js.map",
+    "static/js/3.d1133760.chunk.js": "/react-apps-firststeps/static/js/3.d1133760.chunk.js",
+    "static/js/3.d1133760.chunk.js.map": "/react-apps-firststeps/static/js/3.d1133760.chunk.js.map",
     "index.html": "/react-apps-firststeps/index.html",
-    "static/css/main.7d180cbf.chunk.css.map": "/react-apps-firststeps/static/css/main.7d180cbf.chunk.css.map",
-    "static/js/2.ec324696.chunk.js.LICENSE.txt": "/react-apps-firststeps/static/js/2.ec324696.chunk.js.LICENSE.txt",
+    "static/css/main.bf30de5e.chunk.css.map": "/react-apps-firststeps/static/css/main.bf30de5e.chunk.css.map",
+    "static/js/2.1a48209b.chunk.js.LICENSE.txt": "/react-apps-firststeps/static/js/2.1a48209b.chunk.js.LICENSE.txt",
     "static/media/logo.6ce24c58.svg": "/react-apps-firststeps/static/media/logo.6ce24c58.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.92718de6.js",
-    "static/js/2.ec324696.chunk.js",
-    "static/css/main.7d180cbf.chunk.css",
-    "static/js/main.bffc3643.chunk.js"
+    "static/js/runtime-main.c377e356.js",
+    "static/js/2.1a48209b.chunk.js",
+    "static/css/main.bf30de5e.chunk.css",
+    "static/js/main.e9338085.chunk.js"
   ]
 }
