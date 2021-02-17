@@ -30,7 +30,13 @@ class App extends Component {
             }
             )
         })
-        this.setState({ event: `the Status of todo number ${id} is changed` })
+        let status = ""
+        if (this.state.data[id - 1].completed) {
+            this.setState({ event: `the Status of todo number ${id} is changed to "completed"` })
+        } else {
+            this.setState({ event: `the Status of todo number ${id} is changed to "not completed"` })
+        }
+
     }
 
     checkItV2 = (id) => {
@@ -88,7 +94,7 @@ class App extends Component {
             <div className="todo-list">
                 {dataAll}
                 <input placeholder="new To-Do" type="text" onKeyUp={this.addTodo} onChange={this.setNewTodo} value={this.state.newTodo} />
-                <p>Todo List is {this.state.change} times changed</p>
+                <p>Todo List is {this.state.change} times updated</p>
                 <p>{this.state.event}</p>
             </div>
         )
