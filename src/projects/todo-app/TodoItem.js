@@ -9,9 +9,12 @@ function TodoItem(props) {
             <input type="checkbox"
                 checked={props.data.completed}
                 onChange={() => { console.log(`${props.data.id}.todo-item changed to ${props.data.completed}`) }}
-                onClick={() => props.checkIt(props.data)} />
+                //onClick={() => props.checkIt(props.data)}     // /checIt takes todo-Object
+                onClick={() => props.checkIt(props.data.id)}   //checItV1 and checkItV2 take id
+
+            />
             <p className={className}>{props.data.text}</p>
-            <button class="btn delete" onClick={() => props.deleteTodo(props.data.id)}><i class="fa fa-trash"></i></button>
+            <button className="btn delete" onClick={() => props.deleteTodo(props.data.id)}><i className="fa fa-trash"></i></button>
         </div>
     )
 }
