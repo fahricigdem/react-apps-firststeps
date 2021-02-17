@@ -22,21 +22,28 @@ class App extends Component {
     }
 
     checkItV1 = (id) => {
+        let todoTemp
         this.setState({
             data: [...this.state.data].map(todo => {
                 if (todo.id === id) {
                     todo.completed = !todo.completed
+                    todoTemp = { ...todo }
                 }
                 return todo
             }
             )
         })
         let status = ""
-        if (this.state.data[id - 1].completed) {
+        if (todoTemp.completed) {
             this.setState({ event: `the Status of todo number ${id} is changed to "completed"` })
         } else {
             this.setState({ event: `the Status of todo number ${id} is changed to "not completed"` })
         }
+        // if (this.state.data[id - 1].completed) {
+        //     this.setState({ event: `the Status of todo number ${id} is changed to "completed"` })
+        // } else {
+        //     this.setState({ event: `the Status of todo number ${id} is changed to "not completed"` })
+        // }
 
     }
 
