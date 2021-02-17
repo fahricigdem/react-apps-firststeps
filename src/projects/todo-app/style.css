@@ -68,3 +68,7 @@ input[type=text], select {
     font-size: 12px;
     margin-left: auto;
   }
+
+  .delete:hover{
+      background-color: red
+  }
