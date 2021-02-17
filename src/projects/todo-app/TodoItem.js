@@ -11,6 +11,7 @@ function TodoItem(props) {
                 onChange={() => { console.log(`${props.data.id}.todo-item changed to ${props.data.completed}`) }}
                 onClick={() => props.checkIt(props.data)} />
             <p className={className}>{props.data.text}</p>
+            <button class="btn delete" onClick={() => props.deleteTodo(props.data.id)}><i class="fa fa-trash"></i></button>
         </div>
     )
 }

@@ -62,3 +62,9 @@ input[type=text], select {
     border-radius: 4px;
     box-sizing: border-box;
   }
+
+  .delete{
+    margin-left: 10px;
+    font-size: 12px;
+    margin-left: auto;
+  }

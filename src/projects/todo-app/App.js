@@ -36,9 +36,13 @@ class App extends Component {
         }
     }
 
+    deleteTodo = (id) => {
+        this.setState({ data: this.state.data.filter(todo => todo.id != id) })
+    }
+
     render() {
 
-        let dataAll = this.state.data.map(item => <TodoItem key={item.id} data={item} checkIt={this.checkIt} />)
+        let dataAll = this.state.data.map(item => <TodoItem key={item.id} data={item} checkIt={this.checkIt} deleteTodo={this.deleteTodo} />)
 
         return (
             <div className="todo-list">
