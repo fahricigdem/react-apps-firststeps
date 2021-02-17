@@ -10,7 +10,8 @@ class App extends Component {
         data: todosData,
         newTodo: "",
         change: 0,
-        event: ""
+        event: "",
+        isLoading: true
     }
 
     checkIt = (todo) => {
@@ -86,13 +87,21 @@ class App extends Component {
 
     }
 
+    componentDidMount() {
+        setTimeout(() => {
+            this.setState({ isLoading: false })
+        }, 2000)
+
+    }
+
     render() {
 
         let dataAll = this.state.data.map(item => <TodoItem key={item.id} data={item} /*checkIt={this.checkIt}*/ checkIt={this.checkItV1} deleteTodo={this.deleteTodo} />)
 
         return (
             <div className="todo-list">
-                {dataAll}
+
+                {this.state.isLoading ? <p>Loading...</p> : dataAll}
                 <input placeholder="new To-Do" type="text" onKeyUp={this.addTodo} onChange={this.setNewTodo} value={this.state.newTodo} />
                 <p>Todo List is {this.state.change} times updated</p>
                 <p>{this.state.event}</p>
