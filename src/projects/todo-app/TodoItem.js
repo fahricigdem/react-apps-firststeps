@@ -14,7 +14,7 @@ function TodoItem(props) {
 
             />
             <p className={className}>{props.data.text}</p>
-            <button className="btn delete" onClick={() => props.deleteTodo(props.data.id)}><i className="fa fa-trash"></i></button>
+            <button className="btn delete" onClick={() => props.deleteTodo(props.data)}><i className="fa fa-trash"></i></button>
         </div>
     )
 }

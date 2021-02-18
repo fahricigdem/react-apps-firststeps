@@ -9,6 +9,7 @@ class App extends Component {
     state = {
         data: todosData,
         newTodo: "",
+        ok: null,
         change: 0,
         event: "",
         isLoading: true
@@ -19,6 +20,7 @@ class App extends Component {
         const index = newTodos.indexOf(todo)
         newTodos[index].completed = !newTodos[index].completed
         this.setState({ data: newTodos })
+        this.howManyOk()
     }
 
     checkItV1 = (id) => {
@@ -33,17 +35,14 @@ class App extends Component {
             }
             )
         })
-        let status = ""
+
         if (todoTemp.completed) {
-            this.setState({ event: `the Status of todo number ${id} is changed to "completed"` })
+            this.setState({ event: `"${todoTemp.text}" is now "completed"` })
         } else {
-            this.setState({ event: `the Status of todo number ${id} is changed to "not completed"` })
+            this.setState({ event: `"${todoTemp.text}" is now "Uncompleted"` })
         }
-        // if (this.state.data[id - 1].completed) {
-        //     this.setState({ event: `the Status of todo number ${id} is changed to "completed"` })
-        // } else {
-        //     this.setState({ event: `the Status of todo number ${id} is changed to "not completed"` })
-        // }
+
+        this.howManyOk()
 
     }
 
@@ -57,6 +56,8 @@ class App extends Component {
         }
         )
         this.setState({ data: newTodos })
+
+        this.howManyOk()
     }
 
     setNewTodo = (e) => {
@@ -71,18 +72,23 @@ class App extends Component {
                 text: this.state.newTodo,
                 completed: false
             }
-            this.setState({ newTodo: "" })
-            const newTodos = [...this.state.data, newTodo]
-            this.setState({ data: newTodos })
-            this.setState({ event: `todo number ${newTodo.id} is added` })
+            if (this.state.newTodo) {
+                this.setState({ newTodo: "" })
+                const newTodos = [...this.state.data, newTodo]
+                this.setState({ data: newTodos })
+                this.setState({ event: `"${newTodo.text}" is added` })
+            }
+
 
         }
     }
 
-    deleteTodo = (id) => {
+    deleteTodo = (todo) => {
+        let id = todo.id
         this.setState({ data: this.state.data.filter(todo => todo.id != id) })
-        console.log(`todo number ${id} is deleted`)
-        this.setState({ event: `todo number ${id} is deleted` })
+        console.log(`todo number ${todo.text} is deleted`)
+        this.setState({ event: `"${todo.text}" is deleted` })
+        this.howManyOk()
 
     }
 
@@ -90,27 +96,47 @@ class App extends Component {
         if (prevState.data !== this.state.data) {
             console.log("DidUpdate")
             this.setState({ change: this.state.change + 1 })
+            this.howManyOk()
         }
 
+    }
+
+    howManyOk = () => {
+        let currentData = [...this.state.data]
+        let ok = 0
+        currentData = currentData.map(todo => {
+            if (todo.completed) {
+                ok++
+            }
+            return todo
+        })
+
+        this.setState({ ok })
     }
 
     componentDidMount() {
         setTimeout(() => {
             this.setState({ isLoading: false })
         }, 2000)
-
+        this.howManyOk()
     }
+
 
     render() {
 
         let dataAll = this.state.data.map(item => <TodoItem key={item.id} data={item} /*checkIt={this.checkIt}*/ checkIt={this.checkItV1} deleteTodo={this.deleteTodo} />)
+        let length = this.state.data.length
+        let ok = this.state.ok
+        let notOk = length - ok
 
         return (
             <div className="todo-list">
-
+                <h1>ToDO List ({this.state.data.length})</h1>
+                {(ok > 0 && !this.state.isLoading) && <p>Completed : {ok}</p>}
+                {(notOk > 0 && !this.state.isLoading) && <p>Uncompleted : {notOk}</p>}
                 {this.state.isLoading ? <p>Loading...</p> : dataAll}
                 <input placeholder="new To-Do" type="text" onKeyUp={this.addTodo} onChange={this.setNewTodo} value={this.state.newTodo} />
-                <p>Todo List is {this.state.change} times updated</p>
+                <p>Update Nu :{" " + this.state.change}</p>
                 <p>{this.state.event}</p>
             </div>
         )
