@@ -36,7 +36,7 @@ class App extends Component {
         })
 
         if (todoTemp.completed) {
-            this.setState({ event: `"${todoTemp.text}" is now "completed"` })
+            this.setState({ event: `"${todoTemp.text}" is now "Completed"` })
         } else {
             this.setState({ event: `"${todoTemp.text}" is now "Uncompleted"` })
         }
@@ -72,8 +72,6 @@ class App extends Component {
                 this.setState({ data: newTodos })
                 this.setState({ event: `"${newTodo.text}" is added` })
             }
-
-
         }
     }
 
@@ -102,14 +100,13 @@ class App extends Component {
             }
             return todo
         })
-
         this.setState({ ok })
     }
 
     componentDidMount() {
         setTimeout(() => {
             this.setState({ isLoading: false })
-        }, 2000)
+        }, 1500)
         this.howManyOk()
     }
 
@@ -127,7 +124,7 @@ class App extends Component {
                 {(ok > 0 && !this.state.isLoading) && <p>Completed : {ok}</p>}
                 {(notOk > 0 && !this.state.isLoading) && <p>Uncompleted : {notOk}</p>}
                 {this.state.isLoading ? <p>Loading...</p> : dataAll}
-                <input placeholder="new To-Do" type="text" onKeyUp={this.addTodo} onChange={this.setNewTodo} value={this.state.newTodo} />
+                <input placeholder="add new toDo!" type="text" onKeyUp={this.addTodo} onChange={this.setNewTodo} value={this.state.newTodo} />
                 <p>Update Nu :{" " + this.state.change}</p>
                 <p>{this.state.event}</p>
             </div>
