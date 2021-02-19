@@ -120,10 +120,15 @@ class App extends Component {
 
         return (
             <div className="todo-list">
-                <h1>ToDO List ({this.state.data.length})</h1>
-                {(ok > 0 && !this.state.isLoading) && <p>Completed : {ok}</p>}
-                {(notOk > 0 && !this.state.isLoading) && <p>Uncompleted : {notOk}</p>}
-                {this.state.isLoading ? <p>Loading...</p> : dataAll}
+                <h1 style={{ padding: "0px 30px", margin: '0px' }}>ToDO List ({this.state.data.length})</h1>
+                <center>
+                    <div style={{ height: '50px', margin: '0px 0px 20px 0px' }}>
+                        {(ok > 0 && !this.state.isLoading) && <p>Completed : {ok}</p>}
+                        {(notOk > 0 && !this.state.isLoading) && <p>Uncompleted : {notOk}</p>}
+                    </div>
+                </center>
+                <hr style={{ border: '1px solid red', width: '150px' }} />
+                { this.state.isLoading ? <p>Loading...</p> : dataAll}
                 <input placeholder="add new toDo!" type="text" onKeyUp={this.addTodo} onChange={this.setNewTodo} value={this.state.newTodo} />
                 <p>Update Nu :{" " + this.state.change}</p>
                 <p>{this.state.event}</p>
