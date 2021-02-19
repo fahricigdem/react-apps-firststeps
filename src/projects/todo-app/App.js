@@ -120,7 +120,7 @@ class App extends Component {
 
         return (
             <div className="todo-list">
-                <h1 style={{ padding: "0px 30px", margin: '0px' }}>ToDO List ({this.state.data.length})</h1>
+                <h1>ToDO List ({this.state.data.length})</h1>
                 <center>
                     <div style={{ height: '50px', margin: '0px 0px 20px 0px' }}>
                         {(ok > 0 && !this.state.isLoading) && <p>Completed : {ok}</p>}
