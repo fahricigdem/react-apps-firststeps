@@ -20,7 +20,6 @@ class App extends Component {
         const index = newTodos.indexOf(todo)
         newTodos[index].completed = !newTodos[index].completed
         this.setState({ data: newTodos })
-        this.howManyOk()
     }
 
     checkItV1 = (id) => {
@@ -41,9 +40,6 @@ class App extends Component {
         } else {
             this.setState({ event: `"${todoTemp.text}" is now "Uncompleted"` })
         }
-
-        this.howManyOk()
-
     }
 
     checkItV2 = (id) => {
@@ -56,8 +52,6 @@ class App extends Component {
         }
         )
         this.setState({ data: newTodos })
-
-        this.howManyOk()
     }
 
     setNewTodo = (e) => {
@@ -88,8 +82,6 @@ class App extends Component {
         this.setState({ data: this.state.data.filter(todo => todo.id != id) })
         console.log(`todo number ${todo.text} is deleted`)
         this.setState({ event: `"${todo.text}" is deleted` })
-        this.howManyOk()
-
     }
 
     componentDidUpdate(prevProps, prevState) {
