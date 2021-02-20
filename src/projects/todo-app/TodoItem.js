@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import { XCircleIcon } from '@primer/octicons-react'
 
 function TodoItem(props) {
 
@@ -14,7 +15,8 @@ function TodoItem(props) {
 
             />
             <p className={className}>{props.data.text}</p>
-            <button className="btn delete" onClick={() => props.deleteTodo(props.data)}><i className="fa fa-trash"></i></button>
+            <button className="btn delete" onClick={() => props.deleteTodo(props.data)}><XCircleIcon size={14} /></button>
+
         </div>
     )
 }

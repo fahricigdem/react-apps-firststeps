@@ -25,13 +25,13 @@ class Test extends Component {
         return (
             <div>
                 <center>
-                    <img onClick={handleImageClick} onMouseOver={function () { console.log('over') }} src={this.state.imageLink} />
+                    <img class="img-fluid img-thumbnail" onClick={handleImageClick} onMouseOver={function () { console.log('over') }} src={this.state.imageLink} />
                     <br />
                     <br />
                     {/* <button onClick={function () { console.log('clicked') }}>Click me</button>  {/* Anonymous Function 
                     <button onClick={() => { console.log('clicked') }}>Click me</button> */} {/* Anonymous Function */}
                     {/*<button onClick={handleClick}>Click me</button> */}
-                    <button onClick={handleImageClick}>Change It!</button>
+                    <button className="btn btn-dark" onClick={handleImageClick}>Change It!</button>
                 </center>
             </div>
         );

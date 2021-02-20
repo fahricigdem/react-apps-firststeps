@@ -120,18 +120,18 @@ class App extends Component {
 
         return (
             <div className="todo-list">
-                <h1>ToDO List ({this.state.data.length})</h1>
+                <h1>ToDO List {/*<span class="badge badge-info">{this.state.data.length}</span>*/}</h1>
                 <center>
                     <div style={{ height: '50px', margin: '0px 0px 20px 0px' }}>
-                        {(ok > 0 && !this.state.isLoading) && <p>Completed : {ok}</p>}
-                        {(notOk > 0 && !this.state.isLoading) && <p>Uncompleted : {notOk}</p>}
+                        {(ok > 0 && !this.state.isLoading) && <p>Completed : <span class="badge badge-primary">{ok}</span></p>}
+                        {(notOk > 0 && !this.state.isLoading) && <p>Uncompleted : <span class="badge badge-warning">{notOk}</span></p>}
                     </div>
                 </center>
-                <hr style={{ border: '1px solid red', width: '150px' }} />
+                <hr style={{ border: '1px solid grey', width: '150px' }} />
                 { this.state.isLoading ? <p>Loading...</p> : dataAll}
                 <input placeholder="add new toDo!" type="text" onKeyUp={this.addTodo} onChange={this.setNewTodo} value={this.state.newTodo} />
-                <p>Update Nu :{" " + this.state.change}</p>
-                <p>{this.state.event}</p>
+                <p>Update Nu : <span class="badge badge-secondary">{this.state.change}</span></p>
+                <p><span class="badge badge-info">{this.state.event}</span></p>
             </div>
         )
     }
