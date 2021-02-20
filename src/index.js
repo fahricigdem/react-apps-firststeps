@@ -17,6 +17,12 @@ import App from './App';
 
 ReactDOM.render(
   <React.StrictMode>
+    <br />
+  </React.StrictMode>,
+  document.getElementById('root6')
+);
+ReactDOM.render(
+  <React.StrictMode>
     <Login />
   </React.StrictMode>,
   document.getElementById('root5')

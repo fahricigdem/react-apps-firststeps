@@ -129,7 +129,7 @@ class App extends Component {
                 </center>
                 <hr style={{ border: '1px solid grey', width: '150px' }} />
                 { this.state.isLoading ? <p>Loading...</p> : dataAll}
-                <input placeholder="add new toDo!" type="text" onKeyUp={this.addTodo} onChange={this.setNewTodo} value={this.state.newTodo} />
+                <input className="form-control" style={{ width: '50%', textAlign: 'center' }} placeholder="add new toDo!" type="text" onKeyUp={this.addTodo} onChange={this.setNewTodo} value={this.state.newTodo} />
                 <p>Update Nu : <span class="badge badge-secondary">{this.state.change}</span></p>
                 <p><span class="badge badge-info">{this.state.event}</span></p>
             </div>
