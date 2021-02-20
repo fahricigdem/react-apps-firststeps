@@ -123,15 +123,15 @@ class App extends Component {
                 <h1>ToDO List {/*<span class="badge badge-info">{this.state.data.length}</span>*/}</h1>
                 <center>
                     <div style={{ height: '50px', margin: '0px 0px 20px 0px' }}>
-                        {(ok > 0 && !this.state.isLoading) && <p>Completed : <span class="badge badge-primary">{ok}</span></p>}
-                        {(notOk > 0 && !this.state.isLoading) && <p>Uncompleted : <span class="badge badge-warning">{notOk}</span></p>}
+                        {(ok > 0 && !this.state.isLoading) && <p>Completed : <span className="badge badge-primary">{ok}</span></p>}
+                        {(notOk > 0 && !this.state.isLoading) && <p>Uncompleted : <span className="badge badge-warning">{notOk}</span></p>}
                     </div>
                 </center>
                 <hr style={{ border: '1px solid grey', width: '150px' }} />
                 { this.state.isLoading ? <p>Loading...</p> : dataAll}
-                <input className="form-control" style={{ width: '50%', textAlign: 'center' }} placeholder="add new toDo!" type="text" onKeyUp={this.addTodo} onChange={this.setNewTodo} value={this.state.newTodo} />
-                <p>Update Nu : <span class="badge badge-secondary">{this.state.change}</span></p>
-                <p><span class="badge badge-info">{this.state.event}</span></p>
+                <input className="form-control" style={{ width: '80%', textAlign: 'center' }} placeholder="add new toDo!" type="text" onKeyUp={this.addTodo} onChange={this.setNewTodo} value={this.state.newTodo} />
+                <p>Update Nu : <span className="badge badge-secondary">{this.state.change}</span></p>
+                <p><span className="badge badge-info">{this.state.event}</span></p>
             </div>
         )
     }

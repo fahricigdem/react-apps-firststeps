@@ -6,7 +6,7 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 
 
-
+import Fetch from "./projects/fetch-app/App"
 import Login from "./projects/login-app/App"
 import Test from "./projects/testArea/App1"
 import Todos from "./projects/todo-app/App"
@@ -17,7 +17,7 @@ import App from './App';
 
 ReactDOM.render(
   <React.StrictMode>
-    <br />
+    <Fetch />
   </React.StrictMode>,
   document.getElementById('root6')
 );

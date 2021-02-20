@@ -25,7 +25,7 @@ class Test extends Component {
         return (
             <div>
                 <center>
-                    <img class="img-fluid img-thumbnail" onClick={handleImageClick} onMouseOver={function () { console.log('over') }} src={this.state.imageLink} />
+                    <img className="img-fluid img-thumbnail" onClick={handleImageClick} onMouseOver={function () { console.log('over') }} src={this.state.imageLink} />
                     <br />
                     <br />
                     {/* <button onClick={function () { console.log('clicked') }}>Click me</button>  {/* Anonymous Function 
