@@ -6,7 +6,7 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 
 
-import Fetch from "./projects/fetch-app/App"
+import Fetch from "./projects/fetch-app/App3"
 import Login from "./projects/login-app/App"
 import Test from "./projects/testArea/App1"
 import Todos from "./projects/todo-app/App"
