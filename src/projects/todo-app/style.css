@@ -57,7 +57,7 @@ input[type=checkbox]:focus {
 
 
 input[type=text], select {
-    width: 95%;
+    /* width: 95%; */
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;

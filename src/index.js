@@ -5,8 +5,8 @@ import './index.css';
 
 import reportWebVitals from './reportWebVitals';
 
-
-import Fetch from "./projects/fetch-app/App3"
+import Form from "./projects/forms/App"
+import Fetch from "./projects/fetch-app/App2"
 import Login from "./projects/login-app/App"
 import Test from "./projects/testArea/App1"
 import Todos from "./projects/todo-app/App"
@@ -14,6 +14,13 @@ import Products from "./projects/products-app/App"
 import Products_v1 from "./projects/products-app/App_v1"
 import App from './App';
 
+
+ReactDOM.render(
+  <React.StrictMode>
+    <Form />
+  </React.StrictMode>,
+  document.getElementById('root7')
+);
 
 ReactDOM.render(
   <React.StrictMode>
