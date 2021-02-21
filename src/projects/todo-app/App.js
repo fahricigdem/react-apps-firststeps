@@ -12,6 +12,7 @@ class App extends Component {
         ok: null,
         change: 0,
         event: "",
+        totalTodoNum: null,
         isLoading: true
     }
 
@@ -61,8 +62,11 @@ class App extends Component {
     addTodo = (e) => {
 
         if (e.key === "Enter") {
+            console.log("totalTodoNum", this.state.totalTodoNum)
+            this.setState({ totalTodoNum: this.state.totalTodoNum + 1 })
+            console.log("totalTodoNum", this.state.totalTodoNum)
             const newTodo = {
-                id: this.state.data.length + 1,
+                id: this.state.totalTodoNum,
                 text: this.state.newTodo,
                 completed: false
             }
@@ -72,6 +76,7 @@ class App extends Component {
                 this.setState({ data: newTodos })
                 this.setState({ event: `"${newTodo.text}" is added` })
             }
+            console.log(newTodo.id, newTodo.text)
         }
     }
 
@@ -88,6 +93,7 @@ class App extends Component {
             this.setState({ change: this.state.change + 1 })
             this.howManyOk()
         }
+
 
     }
 
@@ -106,8 +112,12 @@ class App extends Component {
     componentDidMount() {
         setTimeout(() => {
             this.setState({ isLoading: false })
+            this.setState({ totalTodoNum: this.state.data.length + 1 })
         }, 1500)
         this.howManyOk()
+        console.log("didMounted")
+
+
     }
 
 
