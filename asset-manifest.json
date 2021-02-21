@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/react-apps-firststeps/static/css/main.d12ef4ca.chunk.css",
-    "main.js": "/react-apps-firststeps/static/js/main.6dad9757.chunk.js",
-    "main.js.map": "/react-apps-firststeps/static/js/main.6dad9757.chunk.js.map",
+    "main.js": "/react-apps-firststeps/static/js/main.f9cc1987.chunk.js",
+    "main.js.map": "/react-apps-firststeps/static/js/main.f9cc1987.chunk.js.map",
     "runtime-main.js": "/react-apps-firststeps/static/js/runtime-main.0a1e85a8.js",
     "runtime-main.js.map": "/react-apps-firststeps/static/js/runtime-main.0a1e85a8.js.map",
     "static/css/2.8359e630.chunk.css": "/react-apps-firststeps/static/css/2.8359e630.chunk.css",
@@ -14,6 +14,7 @@
     "static/css/2.8359e630.chunk.css.map": "/react-apps-firststeps/static/css/2.8359e630.chunk.css.map",
     "static/css/main.d12ef4ca.chunk.css.map": "/react-apps-firststeps/static/css/main.d12ef4ca.chunk.css.map",
     "static/js/2.502fcd91.chunk.js.LICENSE.txt": "/react-apps-firststeps/static/js/2.502fcd91.chunk.js.LICENSE.txt",
+    "static/media/arrow-clockwise.2ba77545.svg": "/react-apps-firststeps/static/media/arrow-clockwise.2ba77545.svg",
     "static/media/logo.6ce24c58.svg": "/react-apps-firststeps/static/media/logo.6ce24c58.svg"
   },
   "entrypoints": [
@@ -21,6 +22,6 @@
     "static/css/2.8359e630.chunk.css",
     "static/js/2.502fcd91.chunk.js",
     "static/css/main.d12ef4ca.chunk.css",
-    "static/js/main.6dad9757.chunk.js"
+    "static/js/main.f9cc1987.chunk.js"
   ]
 }
