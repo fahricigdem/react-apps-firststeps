@@ -122,10 +122,10 @@ class App extends Component {
             <div className="todo-list">
                 <h1>ToDO List {/*<span class="badge badge-info">{this.state.data.length}</span>*/}</h1>
                 <center>
-                    <div style={{ height: '50px', margin: '0px 0px 20px 0px' }}>
-                        {(ok > 0 && !this.state.isLoading) ? <p>Completed : <span className="badge badge-primary">{ok}</span></p> : <div className="spinner-border"></div>}
-                        {(notOk > 0 && !this.state.isLoading) && <p>Uncompleted : <span className="badge badge-warning">{notOk}</span></p>}
-                    </div>
+                    {!this.state.isLoading ? <div style={{ height: '50px', margin: '0px 0px 20px 0px' }}>
+                        {ok > 0 && <p>Completed : <span className="badge badge-primary">{ok}</span></p>}
+                        {notOk > 0 && <p>Uncompleted : <span className="badge badge-warning">{notOk}</span></p>}
+                    </div> : <div className="spinner-border"></div>}
                 </center>
                 <hr style={{ border: '1px solid grey', width: '150px' }} />
                 { this.state.isLoading ? <div className="spinner-border"></div> : dataAll}
