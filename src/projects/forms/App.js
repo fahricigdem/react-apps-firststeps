@@ -30,14 +30,8 @@ class App extends Component {
         e.preventDefault();
     }
     render() {
-        var style = {
-            display: 'none'
-        }
-        if (this.state.display) {
-            style = {
-                display: 'block'
-            }
-        }
+
+        var style = this.state.display ? { display: 'block' } : { display: 'none' }
 
         return (
             <div className="container">
