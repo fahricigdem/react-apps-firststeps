@@ -5,7 +5,7 @@ class App extends Component {
         firstName: "",
         lastName: "",
         comment: "",
-        isOk: false, //checkbox
+        isOk: null, //checkbox
         gender: "",
         favColor: "",
         display: false
@@ -85,7 +85,7 @@ class App extends Component {
                         checked={this.state.isOk}
                         onChange={this.handleChange}
                     />is ok?
-                    <span> {this.state.isOk.toString()}</span>
+                    <span> {this.state.isOk && this.state.isOk.toString()}</span>
                     <br />
                     <input
                         type="radio"
@@ -128,7 +128,7 @@ class App extends Component {
                 <h3 style={style}>Your First Name: {this.state.firstName}</h3>
                 <h3 style={style}>Your Last Name: {this.state.lastName}</h3>
                 <h3 style={style}>Your Comment: {this.state.comment}</h3>
-                <h3 style={style}>Your Choice: {this.state.isOk.toString()}</h3>
+                <h3 style={style}>Your Choice: {this.state.isOk && this.state.isOk.toString()}</h3>
                 <h3 style={style}>Your Gender: {this.state.gender}</h3>
                 <h3 style={style}>Your Favorite Color: {this.state.favColor}</h3>
 
