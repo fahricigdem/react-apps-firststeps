@@ -24,9 +24,7 @@ class App extends Component {
 
     handleSubmit(e) {
 
-        console.log(this.state)
         this.setState({ display: true })
-
         e.preventDefault();
     }
     render() {
@@ -119,12 +117,12 @@ class App extends Component {
 
                 <br />
 
-                <h3 style={style}>Your First Name: {this.state.firstName}</h3>
-                <h3 style={style}>Your Last Name: {this.state.lastName}</h3>
-                <h3 style={style}>Your Comment: {this.state.comment}</h3>
-                <h3 style={style}>Your Choice: {this.state.isOk && this.state.isOk.toString()}</h3>
-                <h3 style={style}>Your Gender: {this.state.gender}</h3>
-                <h3 style={style}>Your Favorite Color: {this.state.favColor}</h3>
+                <h4 style={style}>Your First Name: {this.state.firstName}</h4>
+                <h4 style={style}>Your Last Name: {this.state.lastName}</h4>
+                <h4 style={style}>Your Comment: {this.state.comment}</h4>
+                <h4 style={style}>Your Choice: {this.state.isOk && this.state.isOk.toString()}</h4>
+                <h4 style={style}>Your Gender: {this.state.gender}</h4>
+                <h4 style={style}>Your Favorite Color: {this.state.favColor}</h4>
 
 
             </div>
