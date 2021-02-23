@@ -31,6 +31,13 @@ class App extends Component {
 
         var style = this.state.display ? { display: 'block' } : { display: 'none' }
 
+        var style1 = this.state.firstName ? { display: 'block' } : { display: 'none' }
+        var style2 = this.state.lastName ? { display: 'block' } : { display: 'none' }
+        var style3 = this.state.comment ? { display: 'block' } : { display: 'none' }
+        var style4 = this.state.isOk ? { display: 'block' } : { display: 'none' }
+        var style5 = this.state.gender ? { display: 'block' } : { display: 'none' }
+        var style6 = this.state.favColor ? { display: 'block' } : { display: 'none' }
+
         return (
             <div className="container">
                 <h1>Forms</h1>
@@ -116,14 +123,14 @@ class App extends Component {
                 </form>
 
                 <br />
-
-                <h4 style={style}>Your First Name: {this.state.firstName}</h4>
-                <h4 style={style}>Your Last Name: {this.state.lastName}</h4>
-                <h4 style={style}>Your Comment: {this.state.comment}</h4>
-                <h4 style={style}>Your Choice: {this.state.isOk && this.state.isOk.toString()}</h4>
-                <h4 style={style}>Your Gender: {this.state.gender}</h4>
-                <h4 style={style}>Your Favorite Color: {this.state.favColor}</h4>
-
+                <div style={style}>
+                    <h4 style={style1}>Your First Name: {this.state.firstName}</h4>
+                    <h4 style={style2}>Your Last Name: {this.state.lastName}</h4>
+                    <h4 style={style3}>Your Comment: {this.state.comment}</h4>
+                    <h4 style={style4}>Your Choice: {this.state.isOk && this.state.isOk.toString()}</h4>
+                    <h4 style={style5}>Your Gender: {this.state.gender}</h4>
+                    <h4 style={style6}>Your Favorite Color: {this.state.favColor}</h4>
+                </div>
 
             </div>
         );
