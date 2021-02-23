@@ -45,6 +45,7 @@ class App extends Component {
                     <input
                         type="text"
                         name="firstName"
+                        value={this.state.firstName}
                         className="form-control"
                         style={{ width: "45vw" }}
                         placeholder="First Name"
@@ -56,6 +57,7 @@ class App extends Component {
                     <input
                         type="text"
                         name="lastName"
+                        value={this.state.lastName}
                         className="form-control"
                         style={{ width: "45vw" }}
                         placeholder="Last Name"
@@ -84,7 +86,7 @@ class App extends Component {
                         checked={this.state.isOk}
                         onChange={this.handleChange}
                     />is ok?
-                    <span> {this.state.isOk && this.state.isOk.toString()}</span>
+                    <span> {this.state.isOk && "Yes"}</span>
                     <br />
                     <input
                         type="radio"
@@ -127,7 +129,7 @@ class App extends Component {
                     <h4 style={style1}>Your First Name: {this.state.firstName}</h4>
                     <h4 style={style2}>Your Last Name: {this.state.lastName}</h4>
                     <h4 style={style3}>Your Comment: {this.state.comment}</h4>
-                    <h4 style={style4}>Your Choice: {this.state.isOk && this.state.isOk.toString()}</h4>
+                    <h4 style={style4}>Your Choice: {this.state.isOk && "Yes"}</h4>
                     <h4 style={style5}>Your Gender: {this.state.gender}</h4>
                     <h4 style={style6}>Your Favorite Color: {this.state.favColor}</h4>
                 </div>
