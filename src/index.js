@@ -5,6 +5,7 @@ import './index.css';
 
 import reportWebVitals from './reportWebVitals';
 
+import Meme from "./projects/meme-generator/App"
 import Form from "./projects/forms/App"
 import Fetch from "./projects/fetch-app/App2"
 import Login from "./projects/login-app/App"
@@ -14,6 +15,12 @@ import Products from "./projects/products-app/App"
 import Products_v1 from "./projects/products-app/App_v1"
 import App from './App';
 
+ReactDOM.render(
+  <React.StrictMode>
+    <Meme />
+  </React.StrictMode>,
+  document.getElementById('root8')
+);
 
 ReactDOM.render(
   <React.StrictMode>
