@@ -42,34 +42,34 @@ class MemeGenerator extends Component {
     render() {
 
         return (
-            <div>
-                <form onSubmit={this.handleSubmit}>
-                    <input
+            <div style={{ textAlign: 'center' }}>
+                <form onSubmit={this.handleSubmit} >
+                    <input style={{ width: "10vw" }}
                         type="text"
                         name="topText"
                         value={this.state.topText}
                         onChange={this.handleChange}
                     />
-                    <input
+                    <input style={{ width: "10vw" }}
                         type="text"
                         name="bottomText"
                         value={this.state.bottomText}
                         onChange={this.handleChange}
                     />
-                    <br />
-                    <button>click</button>
+
+                    <button style={{ width: "5vw" }}>click</button>
                 </form>
 
-                {
-                    <div >
-                        <h1 style={{ position: 'absolute', marginTop: "3vh", marginLeft: '8vw', color: 'yellow' }}>[{this.state.topTextSubmitted}]</h1>
-                        <img
-                            style={{ height: "50vh", width: "25vw" }}
-                            src={this.state.randomImg}
-                        />
-                        <h1 style={{ position: 'absolute', marginTop: "-12vh", marginLeft: '8vw', color: 'yellow' }}>[{this.state.bottomTextSubmitted}]</h1>
-                    </div>
-                }
+
+                <div style={{ height: "50vh", width: "25vw", margin: 'auto' }}>
+                    <h1 style={{ position: 'absolute', marginTop: "3vh", marginLeft: '8vw', color: 'yellow' }}>{this.state.topTextSubmitted}</h1>
+                    <img
+                        style={{ height: "50vh", width: "25vw" }}
+                        src={this.state.randomImg}
+                    />
+                    <h1 style={{ position: 'absolute', marginTop: "-12vh", marginLeft: '8vw', color: 'yellow' }}>{this.state.bottomTextSubmitted}</h1>
+                </div>
+
 
             </div>
         );

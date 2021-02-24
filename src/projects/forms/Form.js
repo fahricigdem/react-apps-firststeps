@@ -11,7 +11,7 @@ function Form(props) {
     var style6 = props.favColor ? { display: 'block' } : { display: 'none' }
 
     return (
-        <div className="container">
+        <div className="container" >
             <h1>Forms</h1>
             <form onSubmit={props.onSubmit}>
                 <input
