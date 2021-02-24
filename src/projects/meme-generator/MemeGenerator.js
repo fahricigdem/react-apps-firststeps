@@ -17,18 +17,12 @@ class MemeGenerator extends Component {
     handleChange(e) {
         const { name, value } = e.target
         this.setState({ [name]: value })
-        console.log(!this.state.loading && !this.state.show)
     }
 
     handleSubmit(e) {
-
         let urlNu = Math.floor(Math.random() * 100)
-
-        console.log(this.state.memes[0].url)
         this.setState({ randomImg: this.state.memes[urlNu].url, topTextSubmitted: this.state.topText, bottomTextSubmitted: this.state.bottomText });
-
         e.preventDefault()
-        console.log(!this.state.loading && !this.state.show)
     }
 
     async componentDidMount() {
