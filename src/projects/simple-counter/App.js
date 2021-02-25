@@ -26,7 +26,7 @@ function App() {
             <div style={style}>
                 <h1 >{count1}</h1>
                 <button onClick={() => setCount1(prevCount => prevCount + 1)}>Plus!</button>
-                <br /><button onClick={deleteAll} >delete</button><br />
+                <br /><button onClick={deleteAll} style={{ borderRadius: '50%' }}>delete</button><br />
                 <button onClick={increment}>Minus!</button>
                 <h1>  {count2}</h1>
             </div>
