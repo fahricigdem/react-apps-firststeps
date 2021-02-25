@@ -59,7 +59,7 @@ class MemeGenerator extends Component {
                     <h1 style={{ position: 'absolute', marginTop: "3vh", marginLeft: '20vw', color: 'yellow' }}>{this.state.topTextSubmitted}</h1>
                     <img
                         style={{ height: "50%", width: "70vw" }}
-                        src={this.state.randomImg}
+                        src={this.state.randomImg ? this.state.randomImg : "http://i.imgflip.com/1bij.jpg"}
                     />
                     <h1 style={{ position: 'absolute', marginTop: "-12vh", marginLeft: '20vw', color: 'yellow' }}>{this.state.bottomTextSubmitted}</h1>
                 </div>
