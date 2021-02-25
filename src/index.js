@@ -5,6 +5,8 @@ import './index.css';
 
 import reportWebVitals from './reportWebVitals';
 
+
+import Counter from "./projects/simple-counter/App"
 import Meme from "./projects/meme-generator/App"
 import Form from "./projects/forms/App"
 import Fetch from "./projects/fetch-app/App2"
@@ -14,6 +16,13 @@ import Todos from "./projects/todo-app/App"
 import Products from "./projects/products-app/App"
 import Products_v1 from "./projects/products-app/App_v1"
 import App from './App';
+
+ReactDOM.render(
+  <React.StrictMode>
+    <Counter />
+  </React.StrictMode>,
+  document.getElementById('root9')
+);
 
 ReactDOM.render(
   <React.StrictMode>
