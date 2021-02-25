@@ -8,7 +8,7 @@ function App() {
 
 
 
-    const increment = () => {
+    const decrement = () => {
         // let value = count2 - 1
         // setCount2(value)
         setCount2(i => i - 1)
@@ -25,9 +25,9 @@ function App() {
         <div style={{ textAlign: 'center' }}>
             <div style={style}>
                 <h1 >{count1}</h1>
-                <button onClick={() => setCount1(prevCount => prevCount + 1)}>Plus!</button>
-                <br /><button onClick={deleteAll} style={{ borderRadius: '50%' }}>delete</button><br />
-                <button onClick={increment}>Minus!</button>
+                <button style={{ backgroundColor: "blue" }} onClick={() => setCount1(prevCount => prevCount + 1)}>Plus!</button>
+                <br /><button onClick={deleteAll} style={{ borderRadius: '50%', backgroundColor: "red" }}>delete</button><br />
+                <button style={{ backgroundColor: "yellow" }} onClick={decrement}>Minus!</button>
                 <h1>  {count2}</h1>
             </div>
             <div style={style1}>
