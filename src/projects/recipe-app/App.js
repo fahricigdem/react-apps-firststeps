@@ -43,7 +43,7 @@ const App = () => {
 
     }
 
-    const handleIngredients = (e) => {
+    const handleIngredient = (e) => {
 
         setIngredient(e.target.value.toLowerCase())
 
@@ -118,7 +118,7 @@ const App = () => {
 
                 </select><br />
 
-                <input type="text" className="search-bar" placeholder="Filter by Ingredients!..." onChange={handleIngredients} /><br />
+                <input type="text" className="search-bar" placeholder="Filter by Ingredients!..." onChange={handleIngredient} /><br />
 
                 <button className="btn btn-success" style={{ borderRadius: "50%" }} >Submit</button></form><br />
 
