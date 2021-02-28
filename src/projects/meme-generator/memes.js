@@ -1,4 +1,20 @@
 function Memes(props) {
+
+    let topStyle = {
+
+        margin: 'auto',
+        marginTop: "5%",
+        color: 'orange'
+    }
+
+    let bottomStyle = {
+
+        margin: 'auto',
+        marginTop: "70%",
+        color: 'orange'
+    }
+
+
     return (
         <div style={{ textAlign: 'center', backgroundColor: '#28527a' }}>
             <form onSubmit={props.handleSubmit} >
@@ -19,14 +35,13 @@ function Memes(props) {
             </form>
 
 
-            <div style={{ height: "50%", width: "70vw", margin: 'auto' }}>
-                <h1 style={{ position: 'absolute', marginTop: "3vh", marginLeft: '20vw', color: 'yellow' }}>{props.topTextSubmitted}</h1>
-                <img
-                    style={{ height: "30%", width: "50vw" }}
-                    src={props.randomImg}
-                />
-                <h1 style={{ position: 'absolute', marginTop: "-12vh", marginLeft: '20vw', color: 'yellow' }}>{props.bottomTextSubmitted}</h1>
+            <div style={{ width: "400px", height: "400px", backgroundColor: "red", margin: 'auto', backgroundImage: `url(${props.randomImg})`, textAlign: 'center' }}>
+                <h1 style={topStyle}>{props.topTextSubmitted}</h1>
+                <h1 style={bottomStyle}>{props.bottomTextSubmitted}</h1>
             </div>
+
+
+
 
 
         </div>
