@@ -1,6 +1,6 @@
 function Memes(props) {
     return (
-        <div style={{ textAlign: 'center' }}>
+        <div style={{ textAlign: 'center', backgroundColor: '#28527a' }}>
             <form onSubmit={props.handleSubmit} >
                 <input style={{ width: "40vw" }}
                     type="text"

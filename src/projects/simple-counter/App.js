@@ -31,7 +31,7 @@ function App() {
     }, [count1])
 
     return (
-        <div style={{ textAlign: 'center' }}>
+        <div style={{ textAlign: 'center', backgroundColor: '#8f4068' }}>
             {!finish ?
                 <div >
                     <h1 style={{ color: color }} >{count1}</h1>
