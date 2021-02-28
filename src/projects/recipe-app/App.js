@@ -73,8 +73,8 @@ const App = () => {
 
             <form className="search-form" onSubmit={handleSubmit}>
 
-                <input type="text" className="search-bar" placeholder="Search by Name!..." onChange={handleName} />
-                <input type="text" className="search-bar" placeholder="Search by Max Calories!..." onChange={handleCalories} />
+                <input type="text" className="search-bar" placeholder="Search by Name!..." onChange={handleName} /><br />
+                <input type="text" className="search-bar" placeholder="Search by Max Calories!..." onChange={handleCalories} /><br />
                 <button className="search-button" style={{ borderRadius: "50%" }} >Submit</button></form>
 
             <div style={style} >
