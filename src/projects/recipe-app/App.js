@@ -68,16 +68,16 @@ const App = () => {
     }
 
     return (
-        <div className="App">
+        <div className="App" style={{ backgroundColor: '#bd2000' }}>
 
             <form className="search-form" onSubmit={handleSubmit}>
 
                 <input type="text" className="search-bar" placeholder="Search by Name!..." onChange={handleName} /><br />
                 <input type="text" className="search-bar" placeholder="Search by Max Calories!..." onChange={handleCalories} /><br />
-                <button className="search-button" style={{ borderRadius: "50%" }} >Submit</button></form><br />
+                <button className="btn btn-success" style={{ borderRadius: "50%" }} >Submit</button></form><br />
 
-            {results < 10 ? <h2><span className="badge badge-danger">results: {results}</span> </h2> : <h2><span className="badge badge-warning">All Products</span></h2>}
-            <br />
+            {results < 10 ? <h2><span className="badge badge-danger">results: {results}</span> </h2> : <h2><span className="badge badge-warning">All Products</span></h2>}<br />
+
             <div style={style} >
                 {data}  </div></div>
     )
