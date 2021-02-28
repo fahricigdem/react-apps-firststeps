@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import "./recipe.style.css"
 import Recipe from "./Recipe"
 
 
@@ -81,7 +82,7 @@ const App = () => {
     }
 
     return (
-        <div className="App" style={{ backgroundColor: '#bd2000' }}>
+        <div className="recipe" style={{ backgroundColor: '#bd2000' }}>
 
             <form className="search-form" onSubmit={handleSubmit}>
 
@@ -110,6 +111,7 @@ const App = () => {
 
             <div style={style} >
                 {data}  </div></div>
+
     )
 }
 

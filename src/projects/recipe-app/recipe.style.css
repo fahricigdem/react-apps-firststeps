@@ -1,0 +1,13 @@
+.recipe {
+    text-align: center;
+}
+
+.label{
+    height: 100px;
+    overflow: hidden;
+    color: whitesmoke; 
+}
+
+.image{
+    border-radius: 10%;
+}
