@@ -108,7 +108,7 @@ const App = () => {
                     className="form-select form-select-sm"
 
                 >
-                    <option selected value="10000">Filter by Max Calories!...</option>
+                    <option selected value="10000">Filter by max calories!...</option>
                     <option value="10000">reset calories</option>
                     <option value="5000">max 5000 cal.</option>
                     <option value="4000">max 4000 cal.</option>
@@ -118,7 +118,7 @@ const App = () => {
 
                 </select><br />
 
-                <input type="text" className="search-bar" placeholder="Filter by Ingredients!..." onChange={handleIngredient} /><br />
+                <input type="text" className="search-bar" placeholder="Filter by ingredients!..." onChange={handleIngredient} /><br />
 
                 <button className="btn btn-success" style={{ borderRadius: "50%" }} >Submit</button></form><br />
 
