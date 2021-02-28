@@ -129,7 +129,7 @@ class App extends Component {
         let notOk = length - ok
 
         return (
-            <div className="todo-list">
+            <div className="todo-list" style={{ minHeight: '100vh', backgroundColor: "whitesmoke" }}>
                 <h1>ToDO List {/*<span class="badge badge-info">{this.state.data.length}</span>*/}</h1>
                 <center>
                     {!this.state.isLoading ? <div style={{ height: '50px', margin: '0px 0px 20px 0px' }}>

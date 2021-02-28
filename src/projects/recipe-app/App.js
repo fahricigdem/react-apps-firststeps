@@ -82,9 +82,6 @@ const App = () => {
                     <Recipe key={index} label={recipe.recipe.label} calories={recipe.recipe.calories} image={recipe.recipe.image} ingredients={ing} />
                 )
             }
-
-
-
         }
     }
     )
@@ -96,7 +93,7 @@ const App = () => {
     }
 
     return (
-        <div className="recipe" style={{ backgroundColor: '#bd2000' }}>
+        <div className="recipe" style={{ backgroundColor: '#bd2000', minHeight: '100vh' }}>
 
             <form className="search-form" onSubmit={handleSubmit}>
 
@@ -110,7 +107,6 @@ const App = () => {
                 >
                     <option selected value="10000">Filter by max calories!...</option>
                     <option value="10000">reset calories</option>
-                    <option value="5000">max 5000 cal.</option>
                     <option value="4000">max 4000 cal.</option>
                     <option value="3000">max 3000 cal.</option>
                     <option value="2000">max 2000 cal.</option>

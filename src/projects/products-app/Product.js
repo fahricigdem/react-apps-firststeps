@@ -39,7 +39,7 @@ function Product(props) {
         </tr>)
 
     return (
-        <table style={styleTable}>
+        <table style={styleTable} >
             <caption style={{ captionSide: 'unset' }}><h1>Products</h1></caption>
             <thead>
                 <tr style={styleTh}>

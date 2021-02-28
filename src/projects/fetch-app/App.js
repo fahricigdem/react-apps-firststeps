@@ -44,7 +44,7 @@ class Fetch extends Component {
 
         return (
 
-            < div className="container" >
+            < div className="container" style={{ minHeight: '100vh' }}>
 
                 <center>
                     <div>Fetched Data from https://randomuser.me:</div>

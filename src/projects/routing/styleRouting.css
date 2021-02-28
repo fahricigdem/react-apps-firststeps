@@ -1,0 +1,31 @@
+
+.App{
+    text-align: center;
+    background-color:#222831;
+    color:whitesmoke;
+    min-height:100vh
+
+}
+
+.routingNav{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    background-color:#3f6091;
+    min-height: 10vh;
+    color:whitesmoke;
+
+
+}
+
+.routingNavElements{
+    list-style: none;
+    width:40%;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+}
+
+.routingNavLink{
+    color:whitesmoke
+}

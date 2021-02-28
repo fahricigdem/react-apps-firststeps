@@ -5,6 +5,8 @@ import './index.css';
 
 import reportWebVitals from './reportWebVitals';
 
+
+import Routing from "./projects/routing/App"
 import Recipe from "./projects/recipe-app/App"
 import Counter from "./projects/simple-counter/App"
 import Meme from "./projects/meme-generator/App"
@@ -16,6 +18,14 @@ import Todos from "./projects/todo-app/App"
 import Products from "./projects/products-app/App"
 import Products_v1 from "./projects/products-app/App_v1"
 import App from './App';
+
+
+ReactDOM.render(
+  <React.StrictMode>
+    <Routing />
+  </React.StrictMode>,
+  document.getElementById('root11')
+);
 
 ReactDOM.render(
   <React.StrictMode>

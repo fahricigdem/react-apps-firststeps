@@ -23,7 +23,7 @@ class Test extends Component {
         }
 
         return (
-            <div>
+            <div style={{ minHeight: '70vh' }}>
                 <center>
                     <img className="img-fluid img-thumbnail" onClick={handleImageClick} onMouseOver={function () { console.log('over') }} src={this.state.imageLink} />
                     <br />
