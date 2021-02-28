@@ -7,17 +7,18 @@ const App = () => {
 
     const [recipes, setRecipes] = useState([])
     const [name, setName] = useState("")
-    const [calories, setCalories] = useState(0)
-    const [filters, setFilters] = useState({ name: "", calories: 10000 })
+    const [calories, setCalories] = useState(10000)
+    const [filter, setFilter] = useState("")
 
     const APP_ID = "fdd263e4"
     const APP_KEY = "a43678d2012a0b9c6d815c7bbbfea1ef"
 
     const getRecipes = async () => {
 
-        const response = await fetch(`https://api.edamam.com/search?q=${filters.name}&app_id=${APP_ID}&app_key=${APP_KEY}`)
+        const response = await fetch(`https://api.edamam.com/search?q=${filter}&app_id=${APP_ID}&app_key=${APP_KEY}`)
         const data = await response.json()
         setRecipes(data.hits)
+        console.log("data fetched")
 
     }
 
@@ -25,7 +26,7 @@ const App = () => {
 
         getRecipes()
 
-    }, [filters])
+    }, [filter])
 
     // recipes.map(i => console.log(i.recipe.label))
 
@@ -43,28 +44,20 @@ const App = () => {
 
     const handleSubmit = (e) => {
 
-        if (calories == "") {
-
-            setFilters({ name: name, calories: 10000 })
-
-        } else {
-
-            setFilters({ name: name, calories: calories })
-
-        }
-
         e.preventDefault();
+        setFilter(name)
+
     }
 
-
-    console.log("filters: ", filters)
+    console.log("filter: ", filter)
 
     var results = 0
 
     const data = recipes.map((recipe, index) => {
 
-        if (recipe.recipe.label.toLowerCase().includes(filters.name) &&
-            (Number(recipe.recipe.calories) < filters.calories)) {
+        if (
+            // recipe.recipe.label.toLowerCase().includes(filter) &&
+            Number(recipe.recipe.calories) < calories) {
 
             results++
 
@@ -90,12 +83,12 @@ const App = () => {
                 {/* <input type="text" className="search-bar" placeholder="Filter by Max Calories!..." onChange={handleCalories} /><br /> */}
                 <select
                     name="favColor"
-                    // value={filters.calories}
+                    // value={calories}
                     onChange={handleCalories}
                     className="form-select form-select-sm"
 
                 >
-                    <option selected>Filter by Max Calories!...</option>
+                    <option selected value="10000">Filter by Max Calories!...</option>
                     <option value="10000">reset</option>
                     <option value="5000">5000</option>
                     <option value="4000">4000</option>
