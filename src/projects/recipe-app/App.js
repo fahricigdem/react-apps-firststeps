@@ -6,7 +6,7 @@ const App = () => {
 
     const [recipes, setRecipes] = useState([])
     const [name, setName] = useState("")
-    const [calories, setCalories] = useState(10000)
+    const [calories, setCalories] = useState(0)
     const [filters, setFilters] = useState({ name: "", calories: 10000 })
 
     const APP_ID = "fdd263e4"
@@ -38,31 +38,30 @@ const App = () => {
         } else {
             setFilters({ name: name, calories: calories })
         }
-
-
         e.preventDefault();
     }
 
-    console.log(filters)
 
+    console.log("filters: ", filters)
+
+    var results = 0
 
     const data = recipes.map((recipe, index) => {
 
         if (recipe.recipe.label.toLowerCase().includes(filters.name) &&
             (Number(recipe.recipe.calories) < filters.calories)) {
+
+            results++
+
             return (
                 <Recipe key={index} label={recipe.recipe.label} calories={recipe.recipe.calories} image={recipe.recipe.image} />
             )
-
-        } else {
-            return (
-                <span></span>
-            )
         }
-
     }
-
     )
+
+    console.log("results: ", results)
+
 
     const style = {
         display: 'flex', flexDirection: "column", justifyContent: 'space-around', alignItems: 'center', flexFlow: 'row wrap'
@@ -75,8 +74,10 @@ const App = () => {
 
                 <input type="text" className="search-bar" placeholder="Search by Name!..." onChange={handleName} /><br />
                 <input type="text" className="search-bar" placeholder="Search by Max Calories!..." onChange={handleCalories} /><br />
-                <button className="search-button" style={{ borderRadius: "50%" }} >Submit</button></form>
+                <button className="search-button" style={{ borderRadius: "50%" }} >Submit</button></form><br />
 
+            {results < 10 ? <h2><span className="badge badge-danger">results: {results}</span> </h2> : <h2><span className="badge badge-warning">All Products</span></h2>}
+            <br />
             <div style={style} >
                 {data}  </div></div>
     )
