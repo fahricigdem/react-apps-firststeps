@@ -7,7 +7,8 @@ class MemeGenerator extends Component {
         bottomText: "",
         topTextSubmitted: "",
         bottomTextSubmitted: "",
-        randomImg: "http://i.imgflip.com/1bij.jpg",
+        // randomImg: "http://i.imgflip.com/1bij.jpg",
+        randomImg: "",
         memes: {}
 
     }

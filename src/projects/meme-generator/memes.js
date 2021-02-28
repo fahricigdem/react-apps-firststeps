@@ -35,7 +35,7 @@ function Memes(props) {
             </form>
 
 
-            <div style={{ width: "400px", height: "400px", backgroundColor: "red", margin: 'auto', backgroundImage: `url(${props.randomImg})`, textAlign: 'center' }}>
+            <div style={{ width: "400px", height: "400px", margin: 'auto', backgroundImage: `url(${props.randomImg})`, textAlign: 'center' }}>
                 <h1 style={topStyle}>{props.topTextSubmitted}</h1>
                 <h1 style={bottomStyle}>{props.bottomTextSubmitted}</h1>
             </div>
