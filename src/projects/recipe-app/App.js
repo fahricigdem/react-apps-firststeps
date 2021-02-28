@@ -8,6 +8,7 @@ const App = () => {
     const [recipes, setRecipes] = useState([])
     const [name, setName] = useState("")
     const [calories, setCalories] = useState(10000)
+    const [ingredient, setIngredient] = useState('')
     const [filter, setFilter] = useState("")
 
     const APP_ID = "fdd263e4"
@@ -42,6 +43,13 @@ const App = () => {
 
     }
 
+    const handleIngredients = (e) => {
+
+        setIngredient(e.target.value.toLowerCase())
+
+    }
+
+
     const handleSubmit = (e) => {
 
         e.preventDefault();
@@ -53,17 +61,30 @@ const App = () => {
 
     var results = 0
 
+
     const data = recipes.map((recipe, index) => {
 
-        if (
-            // recipe.recipe.label.toLowerCase().includes(filter) &&
-            Number(recipe.recipe.calories) < calories) {
+        if (Number(recipe.recipe.calories) < calories) {
 
-            results++
 
-            return (
-                <Recipe key={index} label={recipe.recipe.label} calories={recipe.recipe.calories} image={recipe.recipe.image} />
-            )
+
+            let ing = ""
+            recipe.recipe.ingredients.map(i => {
+                ing = ing + i.text
+                return (
+                    i
+                )
+            })
+            console.log(ing)
+            if (ing.toLowerCase().includes(ingredient)) {
+                results++
+                return (
+                    <Recipe key={index} label={recipe.recipe.label} calories={recipe.recipe.calories} image={recipe.recipe.image} ingredients={ing} />
+                )
+            }
+
+
+
         }
     }
     )
@@ -80,7 +101,6 @@ const App = () => {
             <form className="search-form" onSubmit={handleSubmit}>
 
                 <input type="text" className="search-bar" placeholder="Search! chicken etc..." onChange={handleName} value={name} /><br />
-                {/* <input type="text" className="search-bar" placeholder="Filter by Max Calories!..." onChange={handleCalories} /><br /> */}
                 <select
                     name="favColor"
                     // value={calories}
@@ -89,14 +109,16 @@ const App = () => {
 
                 >
                     <option selected value="10000">Filter by Max Calories!...</option>
-                    <option value="10000">reset</option>
-                    <option value="5000">5000</option>
-                    <option value="4000">4000</option>
-                    <option value="3000">3000</option>
-                    <option value="2000">2000</option>
-                    <option value="1000">1000</option>
+                    <option value="10000">reset calories</option>
+                    <option value="5000">max 5000 cal.</option>
+                    <option value="4000">max 4000 cal.</option>
+                    <option value="3000">max 3000 cal.</option>
+                    <option value="2000">max 2000 cal.</option>
+                    <option value="1000">max 1000 cal.</option>
 
                 </select><br />
+
+                <input type="text" className="search-bar" placeholder="Filter by Ingredients!..." onChange={handleIngredients} /><br />
 
                 <button className="btn btn-success" style={{ borderRadius: "50%" }} >Submit</button></form><br />
 

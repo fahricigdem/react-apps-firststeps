@@ -11,3 +11,11 @@
 .image{
     border-radius: 10%;
 }
+
+
+.ingredients{
+    height: 250px;
+    overflow: hidden;
+    color: whitesmoke; 
+    font-size:small
+}
