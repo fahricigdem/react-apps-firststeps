@@ -18,7 +18,7 @@ function ItemDetail({ match }) {
     return (
         <div>
             <h1>{data.title}</h1>
-            <img src={data.image} />
+            <img src={data.image} style={{ maxWidth: '100vw' }} />
         </div>
     )
 }
