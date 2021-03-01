@@ -59,14 +59,11 @@ const App = () => {
 
     console.log("filter: ", filter)
 
-    var results = 0
-
+    var results = 0 // the number of filtered results
 
     const data = recipes.map((recipe, index) => {
 
         if (Number(recipe.recipe.calories) < calories) {
-
-
 
             let ing = ""
             recipe.recipe.ingredients.map(i => {

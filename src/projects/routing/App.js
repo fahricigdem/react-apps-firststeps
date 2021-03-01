@@ -4,6 +4,7 @@ import Navbar from "./Nav"
 import Homepage from "./Home"
 import About from "./About"
 import Shop from "./Shop"
+import itemDetail from "./itemDetail"
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 
@@ -15,7 +16,8 @@ function App() {
                 <Switch>
                     <Route path="/" exact component={Homepage} />
                     <Route path="/about" component={About} />
-                    <Route path="/shop" component={Shop} />
+                    <Route path="/shop" exact component={Shop} />
+                    <Route path="/shop/:id" component={itemDetail} />
                 </Switch>
             </div>
         </Router>

@@ -29,3 +29,8 @@
 .routingNavLink{
     color:whitesmoke
 }
+
+.routingShopUl{
+    list-style: none;
+    color:#adc9f0
+}
