@@ -6,7 +6,7 @@ function Home() {
         <div>
             <h1>Homepage</h1>
             <br /><br /><br /><br /><br />
-            <Link to='/shop'>go Shopping</Link>
+            <Link to='/react-apps-firststeps/shop'>go Shopping</Link>
         </div>
     )
 }

@@ -17,7 +17,7 @@ function Shop() {
 
     const dataList = data.map(item =>
         <li key={item.id}>
-            <Link to={`/shop/${item.id}`}>{item.title}</Link>
+            <Link to={`/react-apps-firststeps/shop/${item.id}`}>{item.title}</Link>
         </li>)
 
     return (

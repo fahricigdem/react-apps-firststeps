@@ -5,15 +5,15 @@ function Nav() {
     return (
         <nav className="routingNav">
 
-            <Link to="/">
+            <Link to="/react-apps-firststeps/">
                 <h3>Logo</h3>
             </Link>
 
             <ol className="routingNavElements">
-                <Link to="/about" className="routingNavLink">
+                <Link to="/react-apps-firststeps/about" className="routingNavLink">
                     <li>About</li>
                 </Link>
-                <Link to="/shop" className="routingNavLink">
+                <Link to="/react-apps-firststeps/shop" className="routingNavLink">
                     <li>Shop</li>
                 </Link>
             </ol>

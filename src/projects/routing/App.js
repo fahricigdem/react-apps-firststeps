@@ -14,10 +14,10 @@ function App() {
             <div className="App">
                 <Navbar />
                 <Switch>
-                    <Route path="/" exact component={Homepage} />
-                    <Route path="/about" component={About} />
-                    <Route path="/shop" exact component={Shop} />
-                    <Route path="/shop/:id" component={itemDetail} />
+                    <Route path="/react-apps-firststeps/" exact component={Homepage} />
+                    <Route path="/react-apps-firststeps/about" component={About} />
+                    <Route path="/react-apps-firststeps/shop" exact component={Shop} />
+                    <Route path="/react-apps-firststeps/shop/:id" component={itemDetail} />
                 </Switch>
             </div>
         </Router>
