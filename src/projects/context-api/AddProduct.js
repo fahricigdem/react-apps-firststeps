@@ -3,7 +3,7 @@ import { ProductContext } from "./ProductContext"
 
 function AddProduct() {
     const [name, setName] = useState("")
-    const [price, setPrice] = useState()
+    const [price, setPrice] = useState(0)
     const [description, setDescription] = useState("")
     const [products, setProducts] = useContext(ProductContext)
 
@@ -12,7 +12,7 @@ function AddProduct() {
     }
 
     const updatePrice = (e) => {
-        setPrice(Number(e.target.value))
+        setPrice(parseInt(e.target.value))
     }
 
     const updateDescription = (e) => {
@@ -22,8 +22,10 @@ function AddProduct() {
     const handleSubmit = (e) => {
         e.preventDefault()
         setProducts(prevProducts => [...prevProducts, { id: prevProducts.length + 1, name, price, description }])
+        setName("")
+        setPrice(0)
+        setDescription("")
     }
-
 
     return (
         <form onSubmit={handleSubmit}>
