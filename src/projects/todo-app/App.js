@@ -62,9 +62,9 @@ class App extends Component {
     addTodo = (e) => {
 
         if (e.key === "Enter") {
-            console.log("totalTodoNum", this.state.totalTodoNum)
+
             this.setState({ totalTodoNum: this.state.totalTodoNum + 1 })
-            console.log("totalTodoNum", this.state.totalTodoNum)
+
             const newTodo = {
                 id: this.state.totalTodoNum,
                 text: this.state.newTodo,

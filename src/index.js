@@ -5,7 +5,7 @@ import './index.css';
 
 import reportWebVitals from './reportWebVitals';
 
-
+import ContextApi from "./projects/context-api/App"
 import Routing from "./projects/routing/App"
 import Recipe from "./projects/recipe-app/App"
 import Counter from "./projects/simple-counter/App"
@@ -19,6 +19,12 @@ import Products from "./projects/products-app/App"
 import Products_v1 from "./projects/products-app/App_v1"
 import App from './App';
 
+ReactDOM.render(
+  <React.StrictMode>
+    <ContextApi />
+  </React.StrictMode>,
+  document.getElementById('root12')
+);
 
 ReactDOM.render(
   <React.StrictMode>

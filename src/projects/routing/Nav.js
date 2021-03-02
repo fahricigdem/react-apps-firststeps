@@ -6,7 +6,7 @@ function Nav() {
         <nav className="routingNav">
 
             <Link to="/react-apps-firststeps/">
-                <h3>Logo</h3>
+                <h3>Router</h3>
             </Link>
 
             <ol className="routingNavElements">
