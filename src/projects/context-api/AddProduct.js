@@ -3,7 +3,7 @@ import { ProductContext } from "./ProductContext"
 
 function AddProduct() {
     const [name, setName] = useState("")
-    const [price, setPrice] = useState(0)
+    const [price, setPrice] = useState("")
     const [description, setDescription] = useState("")
     const [products, setProducts] = useContext(ProductContext)
 
@@ -12,7 +12,7 @@ function AddProduct() {
     }
 
     const updatePrice = (e) => {
-        setPrice(parseInt(e.target.value))
+        setPrice(e.target.value)
     }
 
     const updateDescription = (e) => {
@@ -23,7 +23,7 @@ function AddProduct() {
         e.preventDefault()
         setProducts(prevProducts => [...prevProducts, { id: prevProducts.length + 1, name, price, description }])
         setName("")
-        setPrice(0)
+        setPrice("")
         setDescription("")
     }
 
@@ -37,17 +37,19 @@ function AddProduct() {
                 placeholder="Name"
                 onChange={updateName}
                 value={name}
+                required
             />
             <br />
 
             <input
-                type="text"
+                type="number"
                 name="price"
                 className="form-control"
                 style={{ width: "45vw" }}
                 placeholder="price"
                 onChange={updatePrice}
                 value={price}
+                required
             />
             <input
                 type="text"
