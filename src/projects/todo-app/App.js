@@ -7,7 +7,8 @@ import todosData from "./todosData"
 class App extends Component {
 
     state = {
-        data: todosData,
+        //        data: todosData,
+        data: [],
         newTodo: "",
         ok: null,
         change: 0,
@@ -92,9 +93,8 @@ class App extends Component {
             console.log("DidUpdate")
             this.setState({ change: this.state.change + 1 })
             this.howManyOk()
+            this.saveLocalTodos()
         }
-
-
     }
 
     howManyOk = () => {
@@ -110,14 +110,32 @@ class App extends Component {
     }
 
     componentDidMount() {
+        this.getLocalTodos()
         setTimeout(() => {
             this.setState({ isLoading: false })
             this.setState({ totalTodoNum: this.state.data.length + 1 })
         }, 1500)
         this.howManyOk()
+
         // console.log("didMounted")
+    }
 
+    saveLocalTodos = () => {
 
+        localStorage.setItem("todos", JSON.stringify(this.state.data))
+
+        console.log("stateData (in saveLocalTodos) ", this.state.data)
+        console.log("todoLocal (in saveLocalTodos) ", JSON.parse(localStorage.getItem("todos")))
+    }
+
+    getLocalTodos = () => {
+        if (localStorage.getItem("todos") === null) {
+            localStorage.setItem("todos", JSON.stringify([]))
+        } else {
+            let todoLocal = JSON.parse(localStorage.getItem("todos"))
+            console.log("in getLocalTodos todoLocal", todoLocal)
+            this.setState({ data: todoLocal })
+        }
     }
 
 
