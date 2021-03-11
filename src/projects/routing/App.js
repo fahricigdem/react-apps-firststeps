@@ -5,7 +5,9 @@ import Homepage from "./Home"
 import About from "./About"
 import Shop from "./Shop"
 import itemDetail from "./itemDetail"
+// npm install react-router-dom
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+
 
 
 function App() {

@@ -14,6 +14,7 @@ import Form from "./projects/forms/App"
 import Fetch from "./projects/fetch-app/App2"
 import Login from "./projects/login-app/App"
 import Test from "./projects/testArea/App1"
+import ShopCounter from "./projects/shop-counter/App"
 import Todos from "./projects/todo-app/App"
 import Products from "./projects/products-app/App"
 import Products_v1 from "./projects/products-app/App_v1"
@@ -79,12 +80,21 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById('root4')
 );
+
 ReactDOM.render(
   <React.StrictMode>
     <Test />
   </React.StrictMode>,
   document.getElementById('root3')
 );
+
+ReactDOM.render(
+  <React.StrictMode>
+    <ShopCounter />
+  </React.StrictMode>,
+  document.getElementById('root2a')
+);
+
 ReactDOM.render(
   <React.StrictMode>
     <Products />
