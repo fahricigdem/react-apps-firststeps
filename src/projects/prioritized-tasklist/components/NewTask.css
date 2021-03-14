@@ -1,0 +1,101 @@
+.formContainer{
+    background-color: #555;
+    min-height: 100vh;
+    font-size: calc(10px + 2vmin);
+    color: white;
+
+    /* The form inside this container is  centered horizontally and vertically */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttonContainer{
+    justify-self: flex-end;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    }
+
+
+ /* ---------------------input starts-------------------------------- */
+.newTaskInput{
+    padding: 8px;
+    width: 80vw;
+}
+
+.newTaskInput:hover{
+    border-left: solid .5vh rgb(202, 15, 15);
+}
+
+.newTaskDetail{
+    padding: 8px;
+    width: 80vw;
+}
+
+.newTaskDetail:hover{
+    border-left: solid .5vh rgb(202, 15, 15);
+}
+ /* ---------------------input ends-------------------------------- */
+  /* ------------------buttons starts-------------------------------- */
+
+  .formButton {
+    background-color: rgba(245, 245, 245, 0.897); 
+    border: none;
+    color:black;
+    padding: 15px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 8px 0px;
+    cursor: pointer;
+    width: 10vw;
+    /* border: solid white 1px; */
+    
+  }
+
+  .formButton:hover{
+    border-left: solid .5vh yellow;
+}
+
+
+ .urgent{
+    background-color: #FF9F00;
+    border: solid white 1px;
+    color: white; 
+ }
+
+ .important{
+    background-color: #36A4DD;
+    color: white; 
+ }
+
+  .link {
+    padding: 1vh 0vw; 
+    width: 40vw; 
+    font-size: calc(12px + 2vmin); 
+    color: whitesmoke;
+    border: solid white 0px;
+}
+
+.add{
+    background-color: #54e346;
+    color: "#aa3a3a";
+    width: 80vw; 
+    border: solid white 0px;
+}
+
+
+
+ /* ------------------buttons ends-------------------------------- */
+
+
+
+
+
+
+

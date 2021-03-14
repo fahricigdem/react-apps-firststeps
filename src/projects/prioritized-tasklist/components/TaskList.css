@@ -1,0 +1,110 @@
+.taskListContainer{
+  /* text-align: center; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #555;
+  /* min-width: 100vw; */
+  font-size: calc(10px + 2vmin);
+  min-height: 100vh;
+
+}
+
+.taskrow{
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+  border: solid white 1px;
+}
+
+/* Remove margins and padding from the list */
+  ul {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    min-height: 45vh;
+  }
+  
+  /* Style the list items */
+  ul li {
+    cursor: pointer;
+    list-style: none;
+    display:inline-block;
+    position: relative;
+    padding: 1vh 1vw 0.4vh 4vw;
+    background: #555; /*eee */
+    color:#fff;
+    transition: 0.2s;
+    width: 70vw;
+  
+    /* make the list items unselectable */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Darker background-color on hover */
+  ul li:hover {
+    background: #777;
+  }
+  
+  /* When clicked on, add a background color and strike out text */
+  ul li.checked {
+    background: #888;
+    color: #aaa;
+    text-decoration: line-through;
+  }
+  
+  /* Add a "checked" mark when clicked on */
+  ul li.checked::before {
+    content: '';
+    position: absolute;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 10px;
+    left: 1vw;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 1vw;
+  }
+  
+
+    /* ------------------buttons starts-------------------------------- */
+
+    .formButton {
+      background-color: rgba(245, 245, 245, 0.897); 
+      border: none;
+      color:black;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      margin: 4px 2px;
+      cursor: pointer;
+      min-width: 40vw
+    }
+  
+    .formButton:hover{
+      border-left: solid .5vh yellow;
+  }
+    
+    .link {
+      padding: 1vh .1vw; 
+      width: 40vw; 
+      font-size: calc(10px + 2vmin); 
+      color: whitesmoke;
+  }
+  
+   /* ------------------buttons ends-------------------------------- */
+   .buttonContainer{
+    justify-self: flex-end;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    }

@@ -5,6 +5,8 @@ import './index.css';
 
 import reportWebVitals from './reportWebVitals';
 
+import StyledComponent from "./projects/styled-component/App"
+import Tasklist from "./projects/prioritized-tasklist/App"
 import ContextApi from "./projects/context-api/App"
 import Routing from "./projects/routing/App"
 import Recipe from "./projects/recipe-app/App"
@@ -19,6 +21,23 @@ import Todos from "./projects/todo-app/App"
 import Products from "./projects/products-app/App"
 import Products_v1 from "./projects/products-app/App_v1"
 import App from './App';
+
+
+
+ReactDOM.render(
+  <React.StrictMode>
+    <StyledComponent />
+  </React.StrictMode>,
+  document.getElementById('root14')
+);
+
+
+ReactDOM.render(
+  <React.StrictMode>
+    <Tasklist />
+  </React.StrictMode>,
+  document.getElementById('root13')
+);
 
 ReactDOM.render(
   <React.StrictMode>
