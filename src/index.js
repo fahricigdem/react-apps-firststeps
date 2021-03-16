@@ -5,6 +5,7 @@ import './index.css';
 
 import reportWebVitals from './reportWebVitals';
 
+import StyledComponent2 from "./projects/styled-component2/App"
 import StyledComponent from "./projects/styled-component/App"
 import Tasklist from "./projects/prioritized-tasklist/App"
 import ContextApi from "./projects/context-api/App"
@@ -23,6 +24,12 @@ import Products_v1 from "./projects/products-app/App_v1"
 import App from './App';
 
 
+ReactDOM.render(
+  <React.StrictMode>
+    <StyledComponent2 />
+  </React.StrictMode>,
+  document.getElementById('root15')
+);
 
 ReactDOM.render(
   <React.StrictMode>
