@@ -17,9 +17,9 @@ function App() {
         <Navbar />
 
         <Switch>
-          <Route path="/prioritized-task-list-with-react/" exact component={HomePage} />
-          <Route path="/prioritized-task-list-with-react/new-task" component={NewTask} />
-          <Route path="/prioritized-task-list-with-react/:cat" component={TaskList} />
+          <Route path="/react-apps-firststeps/" exact component={HomePage} />
+          <Route path="/react-apps-firststeps/new-task" component={NewTask} />
+          <Route path="/react-apps-firststeps/:cat" component={TaskList} />
         </Switch>
 
       </Router>

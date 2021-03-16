@@ -15,10 +15,10 @@ const Navbar = () => {
     //In Navbar there are 3 object : Home Link, All Button, Done Badge (has no Link)
     return (
         <nav className="navBar">
-            <Link to="/prioritized-task-list-with-react/" style={{ textDecoration: 'none', color: "whitesmoke" }}>
+            <Link to="/react-apps-firststeps/" style={{ textDecoration: 'none', color: "whitesmoke" }}>
                 <h1 className="navButton navHome">Home</h1></Link>
 
-            <Link to="/prioritized-task-list-with-react/5" style={{ textDecoration: 'none' }} >
+            <Link to="/react-apps-firststeps/5" style={{ textDecoration: 'none' }} >
                 <h5 className="navButton">All: {tasks.length}</h5></Link>
 
             {completed ? <div className="badge badge-danger">Done : {completed} </div> : <div className="badge badge-info">Done : {completed} </div>}

@@ -7,7 +7,7 @@ const TaskListLink = ({ listNu, listName, title, numOfEl }) => {
 
     return (
 
-        <Link to={`/prioritized-task-list-with-react/${listNu}`} style={{ textDecoration: 'none', color: "whitesmoke" }} >
+        <Link to={`/react-apps-firststeps/${listNu}`} style={{ textDecoration: 'none', color: "whitesmoke" }} >
             <div className={`TaskGroup ${listName}`} >
                 <h5>{title}</h5>
                 {numOfEl ? <h4><span className="badge rounded-pill bg-danger">{numOfEl}</span></h4> : ""}

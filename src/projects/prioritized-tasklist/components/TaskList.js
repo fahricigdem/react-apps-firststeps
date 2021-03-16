@@ -25,7 +25,7 @@ const TaskList = ({ match }) => {
 
             <div className="buttonContainer">
 
-                <Link to="/prioritized-task-list-with-react/new-task" style={{ textDecoration: 'none', color: "whitesmoke" }}>
+                <Link to="/react-apps-firststeps/new-task" style={{ textDecoration: 'none', color: "whitesmoke" }}>
                     <button className="formButton" style={{ backgroundColor: "#54e346", color: "#aa3a3a" }}>Add</button>
                 </Link>
 

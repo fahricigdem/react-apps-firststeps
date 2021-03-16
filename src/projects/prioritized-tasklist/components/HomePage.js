@@ -29,7 +29,7 @@ const HomePage = () => {
                 <TaskListLink listNu="1" listName="UrgentImp" title="Urgent & Important" numOfEl={UrgentImp} />
                 <TaskListLink listNu="2" listName="notUrgentImp" title="Important" numOfEl={notUrgentImp} /></div>
 
-            <Link to="/prioritized-task-list-with-react/new-task" style={{ textDecoration: 'none' }}>
+            <Link to="/react-apps-firststeps/new-task" style={{ textDecoration: 'none' }}>
                 <div className="AddHome"><h1> + </h1></div></Link>
 
             <div className="TaskGroupRow">
