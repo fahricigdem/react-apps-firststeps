@@ -7,9 +7,12 @@ function App() {
     return (
         <>
             <h1>Styled Components</h1>
-            <Content />
+            <Content nu="1" />
+            <Content nu='2' />
         </>
     )
 }
 
 export default App
+
+

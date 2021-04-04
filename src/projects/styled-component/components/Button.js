@@ -10,7 +10,6 @@ const StyledButton = styled.button`
     border-radius: 15px;
     flex-direction: column;
     
-    
     &:hover{
         background-color: grey;
     }
