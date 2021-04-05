@@ -24,7 +24,8 @@ const SeasonDisplay = (props) => {
     return (
         <div className={`season-display ${season}`} >
             <i class={`icon-left huge ${iconName} icon`}></i>
-            <h1>{text}<span>*Your Latitude:{props.lat.toFixed(1)} and {new Date().toLocaleString('default', { month: 'long' })} so it is {season}</span></h1>
+            <h1>{text}</h1>
+            <p className="info">*Your Latitude:{props.lat.toFixed(1)} and {new Date().toLocaleString('default', { month: 'long' })} so it is {season}</p>
             <i class={`icon-right huge ${iconName} icon`}></i>
         </div>
     );

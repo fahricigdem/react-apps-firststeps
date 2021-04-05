@@ -12,6 +12,7 @@
 
 .season-display{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     position: relative;
@@ -36,8 +37,8 @@
     color:red;
 }
 
-.season-display span{
+.season-display .info{
     font-style: italic;
-    font-size: 0.3em;
+    font-size: 0.7em;
     vertical-align:top;
 }
