@@ -15,7 +15,7 @@ const App = () => {
     const APP_KEY = "a43678d2012a0b9c6d815c7bbbfea1ef"
 
     const getRecipes = async () => {
-
+        // filter variable is used to get the data from Api. Filter equal to name field in the form(search).
         const response = await fetch(`https://api.edamam.com/search?q=${filter}&app_id=${APP_ID}&app_key=${APP_KEY}`)
         const data = await response.json()
         setRecipes(data.hits)
@@ -24,7 +24,7 @@ const App = () => {
     }
 
     useEffect(() => {
-
+        // if new filter is submitted by user , new data will fetched again.
         getRecipes()
 
     }, [filter])
@@ -51,7 +51,7 @@ const App = () => {
 
 
     const handleSubmit = (e) => {
-
+        // summit button is used for taking name data, name data is used as filter for Api.
         e.preventDefault();
         setFilter(name)
 
@@ -64,9 +64,11 @@ const App = () => {
     const data = recipes.map((recipe, index) => {
 
         if (Number(recipe.recipe.calories) < calories) {
+            // default calory is 10000, if user change it by selecting , results will be filltered (onChange).
 
             let ing = ""
             recipe.recipe.ingredients.map(i => {
+                // all ingredients will be collected in one text, because search is easier in one text.
                 ing = ing + i.text
                 return (
                     i
@@ -74,6 +76,7 @@ const App = () => {
             })
             console.log(ing)
             if (ing.toLowerCase().includes(ingredient)) {
+                // results are filtered by ingredients, that submitted by user as filter (onChange).
                 results++
                 return (
                     <Recipe key={index} label={recipe.recipe.label} calories={recipe.recipe.calories} image={recipe.recipe.image} ingredients={ing} />

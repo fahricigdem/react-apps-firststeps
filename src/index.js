@@ -5,7 +5,8 @@ import './index.css';
 
 import reportWebVitals from './reportWebVitals';
 
-import Last from "./projects/last/App"
+import Seasons from "./projects/seasons/App"
+import Cards from "./projects/cards/App"
 import StyledComponent2 from "./projects/styled-component2/App"
 import StyledComponent from "./projects/styled-component/App"
 import Tasklist from "./projects/prioritized-tasklist/App"
@@ -26,7 +27,14 @@ import App from './App';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Last />
+    <Seasons />
+  </React.StrictMode>,
+  document.getElementById('root17')
+);
+
+ReactDOM.render(
+  <React.StrictMode>
+    <Cards />
   </React.StrictMode>,
   document.getElementById('root16')
 );
