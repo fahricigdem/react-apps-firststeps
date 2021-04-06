@@ -5,6 +5,7 @@ import './index.css';
 
 import reportWebVitals from './reportWebVitals';
 
+import Pics from "./projects/pics/components/App"
 import Seasons from "./projects/seasons/App"
 import Cards from "./projects/cards/App"
 import StyledComponent2 from "./projects/styled-component2/App"
@@ -24,6 +25,13 @@ import Todos from "./projects/todo-app/App"
 import Products from "./projects/products-app/App"
 import Products_v1 from "./projects/products-app/App_v1"
 import App from './App';
+
+ReactDOM.render(
+  <React.StrictMode>
+    <Pics />
+  </React.StrictMode>,
+  document.getElementById('root18')
+);
 
 ReactDOM.render(
   <React.StrictMode>
