@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/react-apps-firststeps/static/css/main.aa0290e8.chunk.css",
-    "main.js": "/react-apps-firststeps/static/js/main.12094f82.chunk.js",
-    "main.js.map": "/react-apps-firststeps/static/js/main.12094f82.chunk.js.map",
-    "runtime-main.js": "/react-apps-firststeps/static/js/runtime-main.634c1791.js",
-    "runtime-main.js.map": "/react-apps-firststeps/static/js/runtime-main.634c1791.js.map",
+    "main.css": "/react-apps-firststeps/static/css/main.20634ee1.chunk.css",
+    "main.js": "/react-apps-firststeps/static/js/main.717c3dd6.chunk.js",
+    "main.js.map": "/react-apps-firststeps/static/js/main.717c3dd6.chunk.js.map",
+    "runtime-main.js": "/react-apps-firststeps/static/js/runtime-main.943dbe97.js",
+    "runtime-main.js.map": "/react-apps-firststeps/static/js/runtime-main.943dbe97.js.map",
     "static/css/2.8359e630.chunk.css": "/react-apps-firststeps/static/css/2.8359e630.chunk.css",
-    "static/js/2.06b200d5.chunk.js": "/react-apps-firststeps/static/js/2.06b200d5.chunk.js",
-    "static/js/2.06b200d5.chunk.js.map": "/react-apps-firststeps/static/js/2.06b200d5.chunk.js.map",
-    "static/js/3.5e9f9859.chunk.js": "/react-apps-firststeps/static/js/3.5e9f9859.chunk.js",
-    "static/js/3.5e9f9859.chunk.js.map": "/react-apps-firststeps/static/js/3.5e9f9859.chunk.js.map",
+    "static/js/2.db403748.chunk.js": "/react-apps-firststeps/static/js/2.db403748.chunk.js",
+    "static/js/2.db403748.chunk.js.map": "/react-apps-firststeps/static/js/2.db403748.chunk.js.map",
+    "static/js/3.c8864358.chunk.js": "/react-apps-firststeps/static/js/3.c8864358.chunk.js",
+    "static/js/3.c8864358.chunk.js.map": "/react-apps-firststeps/static/js/3.c8864358.chunk.js.map",
     "index.html": "/react-apps-firststeps/index.html",
     "static/css/2.8359e630.chunk.css.map": "/react-apps-firststeps/static/css/2.8359e630.chunk.css.map",
-    "static/css/main.aa0290e8.chunk.css.map": "/react-apps-firststeps/static/css/main.aa0290e8.chunk.css.map",
-    "static/js/2.06b200d5.chunk.js.LICENSE.txt": "/react-apps-firststeps/static/js/2.06b200d5.chunk.js.LICENSE.txt",
+    "static/css/main.20634ee1.chunk.css.map": "/react-apps-firststeps/static/css/main.20634ee1.chunk.css.map",
+    "static/js/2.db403748.chunk.js.LICENSE.txt": "/react-apps-firststeps/static/js/2.db403748.chunk.js.LICENSE.txt",
     "static/media/arrow-clockwise.2ba77545.svg": "/react-apps-firststeps/static/media/arrow-clockwise.2ba77545.svg",
     "static/media/logo.6ce24c58.svg": "/react-apps-firststeps/static/media/logo.6ce24c58.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.634c1791.js",
+    "static/js/runtime-main.943dbe97.js",
     "static/css/2.8359e630.chunk.css",
-    "static/js/2.06b200d5.chunk.js",
-    "static/css/main.aa0290e8.chunk.css",
-    "static/js/main.12094f82.chunk.js"
+    "static/js/2.db403748.chunk.js",
+    "static/css/main.20634ee1.chunk.css",
+    "static/js/main.717c3dd6.chunk.js"
   ]
 }
