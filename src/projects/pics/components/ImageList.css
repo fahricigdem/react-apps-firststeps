@@ -1,0 +1,12 @@
+.image-list{
+ display: grid;
+ grid-template-columns: repeat(auto-fill, minmax(25vw, 1fr));
+ grid-gap:0.0001 .1vh;
+ grid-auto-rows: 10px;
+ 
+}
+
+.image-list img {
+    width: 25vw;
+    grid-row-end: span 2;
+}
