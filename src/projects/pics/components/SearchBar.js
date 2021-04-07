@@ -18,6 +18,7 @@ class SearchBar extends React.Component {
                             type="text"
                             value={this.state.term}
                             onChange={e => this.setState({ term: e.target.value })}
+                            placeholder="cars, forest, house, etc..."
                         />
                     </div>
                 </form>
