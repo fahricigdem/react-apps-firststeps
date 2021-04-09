@@ -9,7 +9,9 @@ class ImageCard extends Component {
     }
 
     componentDidMount() {
-        this.imageRef.current.addEventListener('load', this.setSpans)
+        if (this.imageRef.current) {
+            this.imageRef.current.addEventListener('load', this.setSpans)
+        }
     }
 
     setSpans = () => {
