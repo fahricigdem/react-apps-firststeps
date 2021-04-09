@@ -16,16 +16,28 @@ function Shop() {
     }, [])
 
     const dataList = data.map(item =>
-        <li key={item.id}>
-            <Link to={`/react-apps-firststeps/shop/${item.id}`}>{item.title}</Link>
-        </li>)
+        // <li key={item.id}>
+        //     <Link to={`/react-apps-firststeps/shop/${item.id}`}>{item.title}</Link>
+        // </li>
+
+        <div class="item routingShopUl">
+
+            <Link to={`/react-apps-firststeps/shop/${item.id}`}><i class="shop icon"></i>{item.title}</Link>
+        </div>
+
+    )
 
     return (
         <div>
             <h1>Shop</h1>
-            <ul className="routingShopUl">
+            {/* <ul className="routingShopUl">
                 {dataList}
-            </ul>
+            </ul> */}
+
+            <div class="ui list">
+                {dataList}
+            </div>
+
         </div>
     )
 }

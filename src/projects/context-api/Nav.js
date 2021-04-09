@@ -9,14 +9,9 @@ function Nav() {
         <nav className="routingNav">
 
             <h3>Context-Api</h3>
+            <h4>Products <span className="badge badge-warning">{products.length}</span></h4>
 
-            <ul className="routingNavElements">
-
-                <li>Products</li>
-                <li className="badge badge-warning">{products.length}</li>
-
-            </ul>
-        </nav>
+        </nav >
     )
 }
 

@@ -28,40 +28,43 @@ function AddProduct() {
     }
 
     return (
-        <form onSubmit={handleSubmit}>
-            <input
-                type="text"
-                name="name"
-                className="form-control"
-                style={{ width: "45vw" }}
-                placeholder="Name"
-                onChange={updateName}
-                value={name}
-                required
-            />
-            <br />
+        <div className="container">
+            <form className="ui form" onSubmit={handleSubmit}>
+                <input className="field"
+                    type="text"
+                    name="name"
+                    className="form-control"
+                    // style={{ width: "45vw" }}
+                    placeholder="Name"
+                    onChange={updateName}
+                    value={name}
+                    required
+                />
+                <br />
 
-            <input
-                type="number"
-                name="price"
-                className="form-control"
-                style={{ width: "45vw" }}
-                placeholder="price"
-                onChange={updatePrice}
-                value={price}
-                required
-            />
-            <input
-                type="text"
-                name="description"
-                className="form-control"
-                style={{ width: "45vw" }}
-                placeholder="Description"
-                onChange={updateDescription}
-                value={description}
-            />
-            <button>Add</button>
-        </form>
+                <input className="field"
+                    type="number"
+                    name="price"
+                    className="form-control"
+                    // style={{ width: "45vw" }}
+                    placeholder="price"
+                    onChange={updatePrice}
+                    value={price}
+                    required
+                />
+                <input className="field"
+                    type="text"
+                    name="description"
+                    className="form-control"
+                    // style={{ width: "45vw" }}
+                    placeholder="Description"
+                    onChange={updateDescription}
+                    value={description}
+                />
+                <button className="ui button"
+                >Add</button>
+            </form>
+        </div>
     )
 }
 

@@ -3,8 +3,8 @@ import Memes from './memes'
 
 class MemeGenerator extends Component {
     state = {
-        topText: "",
-        bottomText: "",
+        topText: "happy",
+        bottomText: "go go",
         topTextSubmitted: "",
         bottomTextSubmitted: "",
         // randomImg: "http://i.imgflip.com/1bij.jpg",
@@ -22,9 +22,13 @@ class MemeGenerator extends Component {
     }
 
     handleSubmit = (e) => {
+        e.preventDefault()
+        this.handlePicture()
+    }
+
+    handlePicture() {
         let urlNu = Math.floor(Math.random() * 100)
         this.setState({ randomImg: this.state.memes[urlNu].url, topTextSubmitted: this.state.topText, bottomTextSubmitted: this.state.bottomText });
-        e.preventDefault()
     }
 
     async componentDidMount() {
@@ -32,6 +36,8 @@ class MemeGenerator extends Component {
         const json = await response.json();
         const { memes } = json.data
         this.setState({ memes });
+        this.handlePicture();
+
     }
 
     render() {

@@ -25,7 +25,7 @@ class ImageCard extends Component {
 
         return (
             <div style={{ gridRowEnd: `span ${this.state.spans}` }}>
-                <img
+                <img className="rounded"
                     ref={this.imageRef}
                     src={urls.regular}
                     alt={description} />

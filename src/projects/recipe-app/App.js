@@ -6,10 +6,10 @@ import Recipe from "./Recipe"
 const App = () => {
 
     const [recipes, setRecipes] = useState([])
-    const [name, setName] = useState("")
-    const [calories, setCalories] = useState(10000)
-    const [ingredient, setIngredient] = useState('')
-    const [filter, setFilter] = useState("")
+    const [name, setName] = useState("chicken")
+    const [calories, setCalories] = useState(3000)
+    const [ingredient, setIngredient] = useState('onion')
+    const [filter, setFilter] = useState("chicken")
 
     const APP_ID = "fdd263e4"
     const APP_KEY = "a43678d2012a0b9c6d815c7bbbfea1ef"
@@ -100,13 +100,13 @@ const App = () => {
                 <input type="text" className="search-bar" placeholder="Search! chicken etc..." onChange={handleName} value={name} /><br />
                 <select
                     name="favColor"
-                    // value={calories}
+                    value={calories}
                     onChange={handleCalories}
                     className="form-select form-select-sm"
 
                 >
                     <option selected value="10000">Filter by max calories!...</option>
-                    <option value="10000">reset calories</option>
+                    <option value="10000">max 10000 cal.</option>
                     <option value="4000">max 4000 cal.</option>
                     <option value="3000">max 3000 cal.</option>
                     <option value="2000">max 2000 cal.</option>
@@ -114,7 +114,7 @@ const App = () => {
 
                 </select><br />
 
-                <input type="text" className="search-bar" placeholder="Filter by ingredients!..." onChange={handleIngredient} /><br />
+                <input type="text" className="search-bar" value={ingredient} placeholder="Filter by ingredients!..." onChange={handleIngredient} /><br />
 
                 <button className="btn btn-success" style={{ borderRadius: "50%" }} >Submit</button></form><br />
 
