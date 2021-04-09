@@ -1,6 +1,9 @@
 import './VideoItem.css';
 import React from 'react';
 
+// props from VideoList : 
+// video={video}
+// onVideoSelect={onVideoSelect} ---> callback back to App for VideoDetail
 const VideoItem = ({ video, onVideoSelect }) => {
   return (
     <div onClick={() => onVideoSelect(video)} className="video-item item">

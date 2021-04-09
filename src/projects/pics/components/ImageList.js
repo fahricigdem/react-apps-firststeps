@@ -5,7 +5,7 @@ import ImageCard from './ImageCard'
 const ImageList = (props) => {
 
     if (!props.images.length) {
-        return <div className="ui segment">nothing found...</div>
+        return <div className="ui segment">nothing to show...</div>
     }
 
     const images = props.images.map(
