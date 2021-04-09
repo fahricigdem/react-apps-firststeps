@@ -8,7 +8,7 @@ class App extends Component {
 
     state = {
         //        data: todosData,
-        data: [],
+        data: todosData,
         newTodo: "",
         ok: null,
         change: 0,
