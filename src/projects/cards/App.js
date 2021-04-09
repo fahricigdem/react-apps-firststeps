@@ -10,18 +10,18 @@ const App = () => {
         <div className="ui container comments">
             <ApprovalCard>
                 <div>
-                    <h3>Warning!!!</h3>
-                    <p>Are You sure to do this?</p>
+                    <h3>Achtung!!!</h3>
+                    <p>Bist du sicher? Denk doch noch mal!</p>
                 </div>
             </ApprovalCard>
             <ApprovalCard>
-                <CommentDetail author="Sam" timeAgo="Today at 4:45PM" content="Nice blog post!" avatar={faker.image.image()} />
+                <CommentDetail author="Onur" timeAgo="Today at 4:45PM" content="Sehr schööön!" avatar={faker.image.image()} />
             </ApprovalCard>
             <ApprovalCard>
-                <CommentDetail author="Alex" timeAgo="Today at 2:00AM" content="You are right!" avatar={faker.image.image()} />
+                <CommentDetail author="Sezai" timeAgo="Today at 2:00AM" content="Du hast recht!" avatar={faker.image.image()} />
             </ApprovalCard>
             <ApprovalCard>
-                <CommentDetail author="Jane" timeAgo="Yesterday at 5:00PM" content="Ohh nooo!" avatar={faker.image.image()} />
+                <CommentDetail author="Cigdem" timeAgo="Yesterday at 5:00PM" content="Ohh nooo!" avatar={faker.image.image()} />
             </ApprovalCard>
         </div>
     );
