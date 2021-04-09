@@ -16,8 +16,12 @@ class App extends Component {
         this.setState({ images: response.data.results })
     }
 
+    componentDidMount() {
+        this.onSearchSubmit('cars');
+    }
 
     render() {
+
         return (
             <div className="ui container" style={{ marginTop: '10px' }}>
                 <SearchBar onSubmit={this.onSearchSubmit} />
