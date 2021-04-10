@@ -2,7 +2,7 @@ import React from 'react';
 
 //props from App: onFormSubmit={this.onTermSubmit} ---> callback
 class SearchBar extends React.Component {
-  state = { term: 'rap diye' };
+  state = { term: 'power of collaboration' };
 
   onInputChange = event => {
     this.setState({ term: event.target.value });
