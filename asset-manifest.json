@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/react-apps-firststeps/static/css/main.47a9e680.chunk.css",
-    "main.js": "/react-apps-firststeps/static/js/main.8b17e56d.chunk.js",
-    "main.js.map": "/react-apps-firststeps/static/js/main.8b17e56d.chunk.js.map",
+    "main.css": "/react-apps-firststeps/static/css/main.29e82a73.chunk.css",
+    "main.js": "/react-apps-firststeps/static/js/main.341957c1.chunk.js",
+    "main.js.map": "/react-apps-firststeps/static/js/main.341957c1.chunk.js.map",
     "runtime-main.js": "/react-apps-firststeps/static/js/runtime-main.e6235a73.js",
     "runtime-main.js.map": "/react-apps-firststeps/static/js/runtime-main.e6235a73.js.map",
     "static/css/2.8359e630.chunk.css": "/react-apps-firststeps/static/css/2.8359e630.chunk.css",
-    "static/js/2.96567ef4.chunk.js": "/react-apps-firststeps/static/js/2.96567ef4.chunk.js",
-    "static/js/2.96567ef4.chunk.js.map": "/react-apps-firststeps/static/js/2.96567ef4.chunk.js.map",
+    "static/js/2.1c2381ac.chunk.js": "/react-apps-firststeps/static/js/2.1c2381ac.chunk.js",
+    "static/js/2.1c2381ac.chunk.js.map": "/react-apps-firststeps/static/js/2.1c2381ac.chunk.js.map",
     "static/js/3.16a5ca09.chunk.js": "/react-apps-firststeps/static/js/3.16a5ca09.chunk.js",
     "static/js/3.16a5ca09.chunk.js.map": "/react-apps-firststeps/static/js/3.16a5ca09.chunk.js.map",
     "index.html": "/react-apps-firststeps/index.html",
     "static/css/2.8359e630.chunk.css.map": "/react-apps-firststeps/static/css/2.8359e630.chunk.css.map",
-    "static/css/main.47a9e680.chunk.css.map": "/react-apps-firststeps/static/css/main.47a9e680.chunk.css.map",
-    "static/js/2.96567ef4.chunk.js.LICENSE.txt": "/react-apps-firststeps/static/js/2.96567ef4.chunk.js.LICENSE.txt",
+    "static/css/main.29e82a73.chunk.css.map": "/react-apps-firststeps/static/css/main.29e82a73.chunk.css.map",
+    "static/js/2.1c2381ac.chunk.js.LICENSE.txt": "/react-apps-firststeps/static/js/2.1c2381ac.chunk.js.LICENSE.txt",
     "static/media/arrow-clockwise.2ba77545.svg": "/react-apps-firststeps/static/media/arrow-clockwise.2ba77545.svg",
     "static/media/logo.6ce24c58.svg": "/react-apps-firststeps/static/media/logo.6ce24c58.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.e6235a73.js",
     "static/css/2.8359e630.chunk.css",
-    "static/js/2.96567ef4.chunk.js",
-    "static/css/main.47a9e680.chunk.css",
-    "static/js/main.8b17e56d.chunk.js"
+    "static/js/2.1c2381ac.chunk.js",
+    "static/css/main.29e82a73.chunk.css",
+    "static/js/main.341957c1.chunk.js"
   ]
 }
