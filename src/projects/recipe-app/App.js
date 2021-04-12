@@ -103,7 +103,6 @@ const App = () => {
                     value={calories}
                     onChange={handleCalories}
                     className="form-select form-select-sm"
-
                 >
                     <option selected value="10000">Filter by max calories!...</option>
                     <option value="10000">max 10000 cal.</option>

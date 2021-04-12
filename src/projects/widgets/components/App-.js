@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Accordion from "./Accordion";
 import Search from "./Search";
 import Dropdown from "./Dropdown"
-import Translate from "./Translate";
 
 const items = [
     {
@@ -35,13 +34,21 @@ const options = [
 ];
 
 export default () => {
+    const [selected, setSelected] = useState({ label: "select a color" })
+    const [showDropdown, setShowDropdown] = useState(true);
     return (
         <div style={{ minHeight: '60vh' }}>
-            <Translate />
-            <hr /><hr />
-            <Search />
-            <hr /><hr />
-            <Accordion items={items} />
+            <button onClick={() => setShowDropdown(!showDropdown)}>
+                Toggle Dropdown
+        </button>
+            {showDropdown ? (
+                <Dropdown
+                    label={'Select a Color'}
+                    selected={selected}
+                    onSelectedChange={setSelected}
+                    options={options}
+                />
+            ) : null}
         </div>
     );
 };
