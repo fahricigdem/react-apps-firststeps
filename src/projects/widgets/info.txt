@@ -1,3 +1,3 @@
-keywords: WIkipedia Api, dangerouslySetInnerHTML, 
+keywords: Wikipedia Api, dangerouslySetInnerHTML, 
 Hooks, useState, useEffect, useRef, React.createRef, cleanUp Function in useEffect (as componentWillMount)
 Google Translate Api, 

@@ -34,8 +34,8 @@ const options = [
 ];
 
 const Translate = () => {
-  const [language, setLanguage] = useState({ label: 'Deutsch', value: 'de' }); //options[0]
-  const [text, setText] = useState('');
+  const [language, setLanguage] = useState({ label: 'Deutsch', value: 'de' }); //options[6]
+  const [text, setText] = useState('starting is half to finish!');
 
   return (
     <div>

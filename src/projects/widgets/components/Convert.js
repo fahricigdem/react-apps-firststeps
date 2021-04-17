@@ -38,7 +38,7 @@ const Convert = ({ language, text }) => {
 
   return (
     <div>
-      <h1 className="ui header">{translated}</h1>
+      <h1 className="ui header" style={{ color: 'blue' }}>{translated}</h1>
     </div>
   )
 };

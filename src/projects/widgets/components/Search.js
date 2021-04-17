@@ -8,7 +8,6 @@ const Search = () => {
 
   useEffect(() => {
     const search = async () => {
-
       const { data } = await axios.get('https://en.wikipedia.org/w/api.php', {
         params: {
           action: 'query',
@@ -18,9 +17,7 @@ const Search = () => {
           srsearch: term,
         },
       });
-
       setResults(data.query.search);
-
     };
 
     if (term && !results.length) {
@@ -32,7 +29,7 @@ const Search = () => {
           search();
         }
       }, 1000);
-      setTimeoutId(timeoutID)//  --->i use it in place of clean up function blow ...
+      setTimeoutId(timeoutID)//  --->i use it in place of clean up function blow ... this gives info for clearTimeout() func above.
       // cleanup function : i can also use this function. useEffect will conduct this returned function next time of update.
       // return () => {
       // clearTimeout(timeoutId);

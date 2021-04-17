@@ -3,6 +3,8 @@ import Accordion from "./Accordion";
 import Search from "./Search";
 import Dropdown from "./Dropdown"
 import Translate from "./Translate";
+import Route from "./Route";
+import Header from "./Header";
 
 const items = [
     {
@@ -11,7 +13,7 @@ const items = [
     },
     {
         title: "Why use React?",
-        content: "React is a favorite JS library among engineers",
+        content: "React is a favorite JS library",
     },
     {
         title: "How do you use React?",
@@ -34,14 +36,30 @@ const options = [
     },
 ];
 
+
+
 export default () => {
+    const [selected, setSelected] = useState(options[0]);
     return (
         <div style={{ minHeight: '60vh' }}>
-            <Translate />
-            <hr /><hr />
-            <Search />
-            <hr /><hr />
-            <Accordion items={items} />
+            <Header />
+            <Route path="/react-apps-firststeps">
+                <Accordion items={items} />
+            </Route>
+            <Route path="/react-apps-firststeps/list">
+                <Search />
+            </Route>
+            <Route path="/react-apps-firststeps/dropdown">
+                <Dropdown
+                    label="Select a color"
+                    options={options}
+                    selected={selected}
+                    onSelectedChange={setSelected}
+                />
+            </Route>
+            <Route path="/react-apps-firststeps/translate">
+                <Translate />
+            </Route>
         </div>
     );
 };

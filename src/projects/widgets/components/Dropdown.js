@@ -33,8 +33,8 @@ const Dropdown = ({ label, options, selected, onSelectedChange }) => {
     return (
         <>
             <div ref={ref} className="ui form">
-                <div className="field">
-                    <label className="label">{label}</label>
+                <div className="field" >
+                    <label className="label" style={{ color: selected.value }}>{label}</label>
                     <div onClick={() => setOpen(!open)} className={`ui selection dropdown ${open ? 'visible active' : ''}`}>
                         <i className="dropdown icon"></i>
                         <div className="text">{selected.label}</div>
