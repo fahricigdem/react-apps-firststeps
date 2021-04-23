@@ -3,8 +3,14 @@ import ReactDOM from 'react-dom';
 import 'bootstrap/dist/css/bootstrap.css';
 import './index.css';
 
+import { Provider } from "react-redux";
+import { createStore } from "redux";
+import reducers from "./projects/songs-redux/reducers";
+
+
 import reportWebVitals from './reportWebVitals';
 
+import Songs from "./projects/songs-redux/components/App";
 import Widgets from "./projects/widgets/components/App"
 import Videos from "./projects/videos/components/App"
 import Pics from "./projects/pics/components/App"
@@ -27,6 +33,15 @@ import Todos from "./projects/todo-app/App"
 import Products from "./projects/products-app/App"
 import Products_v1 from "./projects/products-app/App_v1"
 import App from './App';
+
+ReactDOM.render(
+  <React.StrictMode>
+    <Provider store={createStore(reducers)}>
+      <Songs />
+    </Provider>
+  </React.StrictMode>,
+  document.getElementById('root21')
+);
 
 ReactDOM.render(
   <React.StrictMode>
