@@ -4,12 +4,16 @@ import 'bootstrap/dist/css/bootstrap.css';
 import './index.css';
 
 import { Provider } from "react-redux";
-import { createStore } from "redux";
-import reducers from "./projects/songs-redux/reducers";
+//import { createStore } from "redux";
+import { createStore, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
+import songReducers from "./projects/songs-redux/reducers";
+import blogReducers from "./projects/redux-blog/reducers";
 
 
 import reportWebVitals from './reportWebVitals';
 
+import Blogs from "./projects/redux-blog/components/App";
 import Songs from "./projects/songs-redux/components/App";
 import Widgets from "./projects/widgets/components/App"
 import Videos from "./projects/videos/components/App"
@@ -34,9 +38,19 @@ import Products from "./projects/products-app/App"
 import Products_v1 from "./projects/products-app/App_v1"
 import App from './App';
 
+
 ReactDOM.render(
   <React.StrictMode>
-    <Provider store={createStore(reducers)}>
+    <Provider store={createStore(blogReducers, applyMiddleware(thunk))}>
+      <Blogs />
+    </Provider>
+  </React.StrictMode>,
+  document.getElementById('root22')
+);
+
+ReactDOM.render(
+  <React.StrictMode>
+    <Provider store={createStore(songReducers)}>
       <Songs />
     </Provider>
   </React.StrictMode>,

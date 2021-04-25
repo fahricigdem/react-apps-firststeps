@@ -18,7 +18,7 @@ const App = () => {
                 <CommentDetail author="Onur" timeAgo="Today at 4:45PM" content="Sehr schööön!" avatar={faker.image.image()} />
             </ApprovalCard>
             <ApprovalCard>
-                <CommentDetail author="Sezai" timeAgo="Today at 2:00AM" content="Du hast recht!" avatar={faker.image.image()} />
+                <CommentDetail author="Fahri" timeAgo="Today at 2:00AM" content="Du hast recht!" avatar={faker.image.image()} />
             </ApprovalCard>
             <ApprovalCard>
                 <CommentDetail author="Cigdem" timeAgo="Yesterday at 5:00PM" content="Ohh nooo!" avatar={faker.image.image()} />

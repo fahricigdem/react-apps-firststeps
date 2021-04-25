@@ -12,7 +12,7 @@ const App = () => {
         <div className="column eight wide">
           <SongDetail />
         </div>
-        <i>*Redux Application</i>
+        <i>*with Redux</i>
       </div>
     </div>
   );

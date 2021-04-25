@@ -1,0 +1,6 @@
+# jsonplaceholder Api is used
+# 2 different data fetched: users and posts, then 2 json data combined 
+
+
+"redux-thunk": "^2.3.0",
+ "lodash": "^4.17.21",
