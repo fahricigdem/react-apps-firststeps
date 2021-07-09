@@ -14,13 +14,13 @@ const App = () => {
                 </div>
             </ApprovalCard>
             <ApprovalCard>
-                <CommentDetail author="Onur" timeAgo="Today at 4:45PM" content="Sehr schööön!" avatar={faker.image.image()} />
+                <CommentDetail author="Onur" timeAgo="Heute um 4:45 Uhr" content="Sehr schööön!" avatar={faker.image.image()} />
             </ApprovalCard>
             <ApprovalCard>
-                <CommentDetail author="Fahri" timeAgo="Today at 2:00AM" content="Du hast recht!" avatar={faker.image.image()} />
+                <CommentDetail author="Fahri" timeAgo="Heute um 2:00 Uhr" content="Du hast recht!" avatar={faker.image.image()} />
             </ApprovalCard>
             <ApprovalCard>
-                <CommentDetail author="Cigdem" timeAgo="Yesterday at 5:00PM" content="Ohh nooo!" avatar={faker.image.image()} />
+                <CommentDetail author="Cigdem" timeAgo="Gestern um 17:00 Uhr" content="Ohh nooo!" avatar={faker.image.image()} />
             </ApprovalCard>
         </div>
     );
