@@ -1,112 +1,149 @@
+import Matt from "./matthew.png"
+import Moll from "./molly.png"
+import Ely from "./elyse.png"
 function Form(props) {
 
     // console.log(props)
-    var style = props.display ? { display: 'block' } : { display: 'none' }
 
-    var style1 = props.firstName ? { display: 'block' } : { display: 'none' }
-    var style2 = props.lastName ? { display: 'block' } : { display: 'none' }
-    var style3 = props.comment ? { display: 'block' } : { display: 'none' }
-    var style4 = props.isOk ? { display: 'block' } : { display: 'none' }
-    var style5 = props.gender ? { display: 'block' } : { display: 'none' }
-    var style6 = props.favColor ? { display: 'block' } : { display: 'none' }
 
     return (
-        <div className="container" style={{ minHeight: '100vh' }} >
-            <h1>Forms</h1>
-            <form onSubmit={props.onSubmit}>
-                <input
-                    type="text"
-                    name="firstName"
-                    value={props.firstName}
-                    className="form-control"
-                    style={{ width: "45vw" }}
-                    placeholder="First Name"
-                    onChange={props.onChange}
-                />
-                <span> {props.firstName}</span>
-                <br />
+        <>
+            <div className="ui grid">
+                <div className="twelve wide column">
 
-                <input
-                    type="text"
-                    name="lastName"
-                    value={props.lastName}
-                    className="form-control"
-                    style={{ width: "45vw" }}
-                    placeholder="Last Name"
-                    onChange={props.onChange}
-                />
-                <span> {props.lastName}</span>
+                    <h1>Forms</h1>
+                    <form className="ui form" onSubmit={props.onSubmit}>
+                        <div className="field">
+                            <label>First Name</label>
+                            <input type="text" name="firstName"
+                                onChange={props.onChange}
+                                value={props.firstName}
+                                placeholder="First Name"
+                                required
+                            />
+                        </div>
 
-                <textarea
-                    name="comment"
-                    className="form-control"
-                    style={{ width: "60vw", display: "inline-block" }}
-                    id="comment"
-                    // cols="30"
-                    // rows="10"
-                    value={props.comment}
-                    placeholder="Your Comment"
-                    onChange={props.onChange}
-                />
-                <span> {props.comment}</span>
+                        <div className="field">
+                            <label>Last Name</label>
+                            <input type="text" name="lastName"
+                                onChange={props.onChange}
+                                value={props.lastName}
+                                placeholder="Last Name"
+                                required
+                            />
+                        </div>
 
-                <br />
+                        <div className="field">
+                            <label>Frei Text</label>
+                            <textarea rows="2"
+                                name="comment"
+                                id="comment"
+                                value={props.comment}
+                                placeholder="About You"
+                                onChange={props.onChange}
+                            />
+                        </div>
 
-                <input
-                    type="checkbox"
-                    name="isOk"
-                    checked={props.isOk}
-                    onChange={props.onChange}
-                />is ok?
-                <span> {props.isOk && "Yes"}</span>
-                <br />
-                <input
-                    type="radio"
-                    name="gender"
-                    value="Male"
-                    onChange={props.onChange}
-                />Male
-                <br />
-                <input
-                    type="radio"
-                    name="gender"
-                    value="Female"
-                    onChange={props.onChange}
-                />Female
-                <p> Gender: {props.gender}</p>
+                        <div className="ui toggle checkbox">
+                            <input type="checkbox"
+                                name="isOk"
+                                checked={props.isOk}
+                                onChange={props.onChange}
+                            />
+                            <label>is Ok?</label>
+                        </div>
 
-                <label >Favorite Color:</label>
-                <select
-                    name="favColor"
-                    value={props.favColor}
-                    onChange={props.onChange}
-                    className="form-select form-select-sm"
+                        <br />
 
-                >
-                    <option selected>Open this select menu</option>
-                    <option value="red">red</option>
-                    <option value="green">green</option>
-                    <option value="blue">blue</option>_
+                        <div className="grouped fields">
+                            <label>Gender</label>
+                            <div className="field">
+                                <div className="ui radio checkbox">
+                                    <input type="radio" name="gender" value="Male" onChange={props.onChange} />
+                                    <label>Male</label>
+                                </div>
+                            </div>
+                            <div className="field">
+                                <div className="ui radio checkbox">
+                                    <input type="radio" name="gender" value="Female" onChange={props.onChange} />
+                                    <label>Female</label>
+                                </div>
+                            </div>
+                            <div className="field">
+                                <div className="ui radio checkbox">
+                                    <input type="radio" name="gender" value="Diverse" onChange={props.onChange} />
+                                    <label>Diverse</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="field">
+                            <label>Favorite Color: </label>
+                            <select className="ui search dropdown"
+                                name="favColor"
+                                value={props.favColor}
+                                onChange={props.onChange}
+                            >
+                                <option value="">Favorite Color</option>
+                                <option value="red">Red</option>
+                                <option value="green">Green</option>
+                                <option value="blue">Blue</option>
+                            </select>
+                        </div>
 
-                </select>
-                <p> Favorite Color: {props.favColor}</p>
+                        {props.display ?
+                            <button className="negative ui button">Hide</button>
+                            :
+                            <button className="positive ui button">Display</button>
+                        }
+                    </form>
 
-                <button>Submit</button>
+                </div>
 
 
-            </form>
 
-            <br />
-            <div style={style}>
-                <h4 style={style1}>Your First Name: {props.firstName}</h4>
-                <h4 style={style2}>Your Last Name: {props.lastName}</h4>
-                <h4 style={style3}>Your Comment: {props.comment}</h4>
-                <h4 style={style4}>Your Choice: {props.isOk && "Yes"}</h4>
-                <h4 style={style5}>Your Gender: {props.gender}</h4>
-                <h4 style={style6}>Your Favorite Color: {props.favColor}</h4>
+                <div className="four wide column">
+
+                    <div className="ui link cards" >
+                        <div className="card">
+                            <div className="image">
+                                {props.display ?
+                                    <img src={props.gender === "Male" ? Matt : props.gender === "Female" ? Moll : Ely} />
+                                    :
+                                    <img src={Ely} />
+                                }
+                            </div>
+                            <div className="content">
+                                <div className="ui small header"> <h2>{props.display ? props.firstName : "Max"} {props.display ? props.lastName : "Mustermann"}</h2></div>
+                                <div className="meta">
+                                    <p style={{ fontSize: "1.5rem" }} >{props.display ? props.gender : "Gender"}</p>
+                                </div>
+                                <div className="description" style={{ fontSize: "1.5rem" }}>
+                                    {props.display ? props.comment : "Description"}
+                                </div>
+                            </div>
+                            <div className="extra content" style={{ fontSize: "1.5rem" }}>
+                                {props.display ?
+                                    <span >
+                                        Group {props.favColor === "red" ? <span style={{ color: "red" }} >Red</span> : props.favColor === "green" ? <span style={{ color: "green" }} >Green</span> : props.favColor === "green" ? <span style={{ color: "blue" }} >Blue</span> : "Color"}
+                                    </span> :
+                                    <span>Group RGB</span>}
+                                {props.display ?
+                                    <span className="right floated">
+                                        {props.isOk ? <i className="thumbs up outline icon"></i> : <i className="thumbs down icon"></i>}
+                                    </span> :
+                                    <span className="right floated">
+                                        <i className="hand peace outline icon"></i>
+                                    </span>}
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
             </div>
-
-        </div>
+        </>
     );
 }
 

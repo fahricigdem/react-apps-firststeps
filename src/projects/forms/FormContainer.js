@@ -27,14 +27,14 @@ class FormContainer extends Component {
 
     handleSubmit = (e) => {
 
-        this.setState({ display: true })
+        this.setState({ display: !this.state.display })
         e.preventDefault();
     }
 
     render() {
 
         return (
-            <div className="container">
+            <div className="container" style={{ minHeight: '100vh' }} >
                 <Form
                     // firstName={this.state.firstName}
                     // lastName={this.state.lastName}
