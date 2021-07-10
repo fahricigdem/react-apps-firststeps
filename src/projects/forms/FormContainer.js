@@ -11,19 +11,21 @@ class FormContainer extends Component {
         display: false
     }
 
-    handleChange = this.handleChange.bind(this)  /////Bind islemi ile state ile function baglanir
-    handleSubmit = this.handleSubmit.bind(this)
+    //handleChange = this.handleChange.bind(this)  /////Bind islemi ile state ile function baglanir ya da arrow function ile buna gerek kalmaz
+    //handleSubmit = this.handleSubmit.bind(this)
 
-    handleChange(e) {
-        // console.log(e.target.value)
+    handleChange = (e) => {
+        console.log(e.target)
         const { name, value, type, checked } = e.target
-        type === 'checkbox' ? this.setState({ [name]: checked }) : this.setState({ [name]: value })
+        type === 'checkbox' ?
+            this.setState({ [name]: checked }) :
+            this.setState({ [name]: value })
 
         // this.setState({[e.target.name]: e.target.value})
     }
 
 
-    handleSubmit(e) {
+    handleSubmit = (e) => {
 
         this.setState({ display: true })
         e.preventDefault();
@@ -42,7 +44,7 @@ class FormContainer extends Component {
                     // favColor={this.state.favColor}
                     // display={this.state.display}
                     {...this.state}
-                    onHandle={this.handleChange}
+                    onChange={this.handleChange}
                     onSubmit={this.handleSubmit}
                 />
             </div>

@@ -17,11 +17,11 @@ function Form(props) {
                 <input
                     type="text"
                     name="firstName"
-                    // value={props.firstName}
+                    value={props.firstName}
                     className="form-control"
                     style={{ width: "45vw" }}
                     placeholder="First Name"
-                    onChange={props.onHandle}
+                    onChange={props.onChange}
                 />
                 <span> {props.firstName}</span>
                 <br />
@@ -29,11 +29,11 @@ function Form(props) {
                 <input
                     type="text"
                     name="lastName"
-                    // value={props.lastName}
+                    value={props.lastName}
                     className="form-control"
                     style={{ width: "45vw" }}
                     placeholder="Last Name"
-                    onChange={props.onHandle}
+                    onChange={props.onChange}
                 />
                 <span> {props.lastName}</span>
 
@@ -44,9 +44,9 @@ function Form(props) {
                     id="comment"
                     // cols="30"
                     // rows="10"
-                    // value={props.comment}
+                    value={props.comment}
                     placeholder="Your Comment"
-                    onChange={props.onHandle}
+                    onChange={props.onChange}
                 />
                 <span> {props.comment}</span>
 
@@ -55,31 +55,31 @@ function Form(props) {
                 <input
                     type="checkbox"
                     name="isOk"
-                    // checked={props.isOk}
-                    onChange={props.onHandle}
+                    checked={props.isOk}
+                    onChange={props.onChange}
                 />is ok?
-                    <span> {props.isOk && "Yes"}</span>
+                <span> {props.isOk && "Yes"}</span>
                 <br />
                 <input
                     type="radio"
                     name="gender"
                     value="Male"
-                    onChange={props.onHandle}
+                    onChange={props.onChange}
                 />Male
-                    <br />
+                <br />
                 <input
                     type="radio"
                     name="gender"
                     value="Female"
-                    onChange={props.onHandle}
+                    onChange={props.onChange}
                 />Female
-                    <p> Gender: {props.gender}</p>
+                <p> Gender: {props.gender}</p>
 
                 <label >Favorite Color:</label>
                 <select
                     name="favColor"
                     value={props.favColor}
-                    onChange={props.onHandle}
+                    onChange={props.onChange}
                     className="form-select form-select-sm"
 
                 >
@@ -88,7 +88,7 @@ function Form(props) {
                     <option value="green">green</option>
                     <option value="blue">blue</option>_
 
-                    </select>
+                </select>
                 <p> Favorite Color: {props.favColor}</p>
 
                 <button>Submit</button>
