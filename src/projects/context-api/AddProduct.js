@@ -27,6 +27,8 @@ function AddProduct() {
         setDescription("")
     }
 
+
+
     return (
         <div className="container">
             <form className="ui form" onSubmit={handleSubmit}>
