@@ -12,13 +12,14 @@ class Login extends Component {
         this.setState({ input: e.target.value })
     }
 
-    handleKeyUp = (e) => {
-        if (e.key === "Enter") {
-            this.handleButton()
-        }
-    }
+    //    handleKeyUp = (e) => {
+    //        if (e.key === "Enter") {
+    //            this.handleButton(e)
+    //        }
+    //    }
 
-    handleButton = () => {
+    handleButton = (e) => {
+        e.preventDefault();
         if (!this.state.isLogin) {
             this.setState(
                 {
@@ -41,13 +42,16 @@ class Login extends Component {
 
         return (
             <center>
-                <div style={{ minHeight: '40vh' }}>
-                    <p><input className="form-control" style={{ width: '50%', textAlign: 'center' }} type="text" placeholder="Wer bist du?" value={this.state.isLogin ? "" : this.state.input} onChange={this.handleOnChange} onKeyUp={this.handleKeyUp} /></p>
-                    <button className="btn btn-primary btn-sm-m-2" style={this.state.isLogin ? { backgroundColor: '#F76C66' } : { backgroundColor: '#A5E54A' }} onClick={() => this.handleButton()}>{this.state.isLogin ? "log out" : "log in"}</button>
-                    <p style={{ marginTop: '20px' }}>{this.state.message}</p>
+                <div className="container" style={{ minHeight: '40vh', margin: "10px" }}>
+                    <form className="ui form" onSubmit={this.handleButton}>
+                        <div className="field">
+                            <input className="form-control" style={{ width: '50%', textAlign: 'center' }} type="text" placeholder="Wer bist du?" value={this.state.input} onChange={this.handleOnChange} required />
+                            <button className="btn btn-primary btn-sm-m-2" style={this.state.isLogin ? { backgroundColor: '#F76C66' } : { backgroundColor: '#A5E54A' }} >{this.state.isLogin ? "log out" : "log in"}</button>
+                        </div>
+                        <p style={{ marginTop: '20px' }}>{this.state.message}</p>
+                    </form>
                 </div>
             </center>
-
         );
     }
 }
