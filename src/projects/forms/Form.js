@@ -124,7 +124,7 @@ function Form(props) {
                             <div className="extra content" style={{ fontSize: "1.5rem" }}>
                                 {props.display ?
                                     <span >
-                                        Group {props.favColor === "red" ? <span style={{ color: "red" }} >Red</span> : props.favColor === "green" ? <span style={{ color: "green" }} >Green</span> : props.favColor === "green" ? <span style={{ color: "blue" }} >Blue</span> : "Color"}
+                                        Group {props.favColor === "red" ? <span style={{ color: "red" }} >Red</span> : props.favColor === "green" ? <span style={{ color: "green" }} >Green</span> : props.favColor === "blue" ? <span style={{ color: "blue" }} >Blue</span> : "Color"}
                                     </span> :
                                     <span>Group RGB</span>}
                                 {props.display ?

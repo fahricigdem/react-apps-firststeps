@@ -34,7 +34,7 @@ class FormContainer extends Component {
     render() {
 
         return (
-            <div className="container" style={{ minHeight: '100vh' }} >
+            <div className="container" style={{ minHeight: '60vh' }} >
                 <Form
                     // firstName={this.state.firstName}
                     // lastName={this.state.lastName}
