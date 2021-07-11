@@ -8,8 +8,8 @@ function Form(props) {
 
     return (
         <>
-            <div className="ui grid">
-                <div className="twelve wide column">
+            <div className="ui grid" style={{ marginTop: "10px" }}>
+                <div className="nine wide column">
 
                     <h1>Forms</h1>
                     <form className="ui form" onSubmit={props.onSubmit}>
@@ -99,29 +99,26 @@ function Form(props) {
 
                 </div>
 
-
-
-                <div className="four wide column">
-
-                    <div className="ui link cards" >
-                        <div className="card">
-                            <div className="image">
-                                {props.display ?
-                                    <img src={props.gender === "Male" ? Matt : props.gender === "Female" ? Moll : Ely} />
-                                    :
-                                    <img src={Ely} />
-                                }
+                <div className="seven wide column">
+                    <div className="ui card" >
+                        <div className="image">
+                            {props.display ?
+                                <img src={props.gender === "Male" ? Matt : props.gender === "Female" ? Moll : Ely} />
+                                :
+                                <img src={Ely} />
+                            }
+                        </div>
+                        <div className="content">
+                            <a className="ui header">{props.display ? props.firstName : "Max"} {props.display ? props.lastName : "Musterei"}</a>
+                            <div className="meta">
+                                <span className="date" >{props.display ? props.gender : "Gender"}</span>
                             </div>
-                            <div className="content">
-                                <div className="ui small header"> <h2>{props.display ? props.firstName : "Max"} {props.display ? props.lastName : "Mustermann"}</h2></div>
-                                <div className="meta">
-                                    <p style={{ fontSize: "1.5rem" }} >{props.display ? props.gender : "Gender"}</p>
-                                </div>
-                                <div className="description" style={{ fontSize: "1.5rem" }}>
-                                    {props.display ? props.comment : "Description"}
-                                </div>
+                            <div className="description" >
+                                {props.display ? props.comment : "Description"}
                             </div>
-                            <div className="extra content" style={{ fontSize: "1.5rem" }}>
+                        </div>
+                        <div className="extra content" >
+                            <a>
                                 {props.display ?
                                     <span >
                                         Group {props.favColor === "red" ? <span style={{ color: "red" }} >Red</span> : props.favColor === "green" ? <span style={{ color: "green" }} >Green</span> : props.favColor === "blue" ? <span style={{ color: "blue" }} >Blue</span> : "Color"}
@@ -134,12 +131,10 @@ function Form(props) {
                                     <span className="right floated">
                                         <i className="hand peace outline icon"></i>
                                     </span>}
-                            </div>
+                            </a>
                         </div>
+
                     </div>
-
-
-
 
                 </div>
             </div>

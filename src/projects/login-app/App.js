@@ -42,7 +42,7 @@ class Login extends Component {
 
         return (
             <center>
-                <div className="container" style={{ minHeight: '40vh', margin: "10px" }}>
+                <div className="container" style={{ minHeight: '40vh', marginTop: '10px' }}>
                     <form className="ui form" onSubmit={this.handleButton}>
                         <div className="field">
                             <input className="form-control" style={{ width: '50%', textAlign: 'center' }} type="text" placeholder="Wer bist du?" value={this.state.input} onChange={this.handleOnChange} required />

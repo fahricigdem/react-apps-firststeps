@@ -15,7 +15,7 @@ class FormContainer extends Component {
     //handleSubmit = this.handleSubmit.bind(this)
 
     handleChange = (e) => {
-        console.log(e.target)
+        //console.log(e.target)
         const { name, value, type, checked } = e.target
         type === 'checkbox' ?
             this.setState({ [name]: checked }) :
