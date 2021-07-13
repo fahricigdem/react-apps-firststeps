@@ -27,10 +27,25 @@ const rotate = keyframes`
 // `
 
 const Title = styled.h1`
-    color: #aaecf0;
+    color: #1B7AB4;
     animation: 3s ${fadeIn} ease-in;
-    ${'' /* animation: 3s ${rotate} ease-in; */}
+    
 `
+
+const SubTitle = styled(Title)`
+    font-size: 12px;
+    align-self: center;
+    
+`;
+
+const ParagraphTitle = styled(SubTitle)`
+    color: grey;
+    animation: 3s ${rotate} ease-in;
+`;
+
+const ReversedTitle = props =>
+    <ParagraphTitle {...props} children={props.children.split('').reverse()} />
+
 
 const Section = styled.div`
     background-color: #aac9f0;
@@ -39,20 +54,11 @@ const Section = styled.div`
     flex-direction: column;
     border:  1px solid black;
     border-radius: 15px;
-    margin-top:1px;
+    margin:10px;
+    padding:10px;
 `
 
-const SubTitle = styled(Title)`
-    font-size: 12px;
-    align-self: center;
-`;
 
-const ParagraphTitle = styled(SubTitle)`
-    color: grey;
-`;
-
-const ReversedTitle = props =>
-    <ParagraphTitle {...props} children={props.children.split('').reverse()} />
 
 const Content = ({ nu }) => {
     return (
@@ -63,6 +69,7 @@ const Content = ({ nu }) => {
             <Button text='me second' />
             <Icon border='solid 6px red' statusColor={'steady'} />
             <Icon status='in-progress' />
+            <ParagraphTitle>🔆</ParagraphTitle>
             <ParagraphTitle as={ReversedTitle} >I am a paragraph title</ParagraphTitle>
         </Section>
     )
